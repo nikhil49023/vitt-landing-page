@@ -3,20 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VITT — Sovereign Personal Finance Engine for India</title>
-  <meta name="description" content="Auto-track every rupee with zero cloud data leaks. Privacy-first notification listener with local AES-256 SQLite storage & on-device AI.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <title>VITT — Sovereign Personal Finance Engine</title>
+  <meta name="description" content="India's sovereign personal finance platform. Auto-track transactions on-device with local AI. Zero SMS inbox permissions requested.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Minimal Nav -->
-  <header class="nav-wrapper">
-    <div class="container nav-container">
+  <!-- Floating N5 Nav Pill Bar -->
+  <div class="nav-wrapper">
+    <nav class="nav-pill">
       <a href="#" class="nav-brand">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="32" height="32" rx="8" fill="#10B981"/>
           <path d="M8 12L16 22L24 12" stroke="#022C22" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -24,25 +21,29 @@
       </a>
 
       <ul class="nav-links">
-        <li><a href="#audit" class="nav-link">Permission Audit</a></li>
-        <li><a href="#vector" class="nav-link">Vector SIMD</a></li>
+        <li><a href="#features" class="nav-link">Capabilities</a></li>
+        <li><a href="#audit" class="nav-link">Permissions</a></li>
+        <li><a href="#vector" class="nav-link">Vector RAG</a></li>
         <li><a href="privacy.html" class="nav-link">DPDP Policy</a></li>
       </ul>
 
-      <a href="https://github.com/nikhil49023/VITT/releases/latest" class="btn btn-primary">
-        Download APK v3.0.0
-      </a>
-    </div>
-  </header>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <span class="pulse-badge"><span class="pulse-dot"></span> v3.0.0</span>
+        <a href="https://github.com/nikhil49023/VITT/releases/latest" class="btn btn-primary" style="padding: 8px 18px; font-size: 0.88rem;">
+          Download APK
+        </a>
+      </div>
+    </nav>
+  </div>
 
-  <!-- Asymmetric Hero Macrostructure -->
-  <section class="hero" style="padding-top: 40px;">
+  <!-- Hero Section with Split Kinetic Feed -->
+  <section class="hero">
     <div class="container">
       <div class="hero-split">
         
-        <!-- Left: Sovereign Brand Value -->
+        <!-- Left Column: Hero Narrative -->
         <div style="text-align: left;">
-          <div class="hero-tag">
+          <div class="pulse-badge" style="margin-bottom: 20px;">
             <span>⚡ 0 SMS PERMISSIONS · ON-DEVICE RAG · AES-256 SQLCIPHER</span>
           </div>
 
@@ -51,71 +52,34 @@
             <span>Zero cloud data leaks.</span>
           </h1>
 
-          <p class="hero-sub">
-            VITT reads banking notifications on-device to log transactions into an encrypted local SQLite database. Powered by local AI with zero third-party SMS scraping.
+          <p style="margin: 20px 0 32px 0; font-size: 1.15rem; line-height: 1.6;">
+            VITT reads bank notifications on-device to log transactions automatically into an encrypted SQLite database. Powered by local AI with zero SMS inbox permissions.
           </p>
 
           <div style="display: flex; gap: 16px; flex-wrap: wrap;">
             <a href="https://github.com/nikhil49023/VITT/releases/latest" class="btn btn-primary">
-              Download Production APK (v3.0.0)
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download APK (v3.0.0)
             </a>
             <a href="https://github.com/nikhil49023/VITT" class="btn btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
               View Source on GitHub
             </a>
           </div>
         </div>
 
-        <!-- Right: Live Interactive Terminal Widget -->
-        <div class="terminal-box">
-          <div class="terminal-bar">
-            <div class="terminal-dots">
-              <div class="dot dot-red"></div>
-              <div class="dot dot-yellow"></div>
-              <div class="dot dot-green"></div>
+        <!-- Right Column: Live Animated Notification Feed -->
+        <div class="terminal-card">
+          <div class="terminal-header">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span class="pulse-dot"></span>
+              <span class="mono" style="font-size: 0.8rem; color: var(--text-main); font-weight: 700;">LIVE PARSER FEED</span>
             </div>
-            <div class="terminal-title">vitt_notification_engine.db</div>
-            <div class="mono" style="font-size: 0.7rem; color: var(--accent-mint);">LIVE LATENCY: &lt;3ms</div>
+            <span class="mono" style="font-size: 0.75rem; color: var(--emerald);">LATENCY: &lt; 3ms</span>
           </div>
 
-          <div class="terminal-body">
-            <div class="txn-row">
-              <div>
-                <div style="display: flex; align-items: center; gap: 8px;">
-                  <span class="txn-badge badge-debit">DEBIT</span>
-                  <strong style="font-size: 0.95rem;">Starbucks Indiranagar</strong>
-                </div>
-                <div class="mono" style="font-size: 0.75rem; color: var(--text-faint); margin-top: 4px;">
-                  GPay · Auto-Categorized: Food & Dining
-                </div>
-              </div>
-              <div class="mono" style="font-weight: 700; color: #F8FAFC;">- ₹420.00</div>
-            </div>
-
-            <div class="txn-row">
-              <div>
-                <div style="display: flex; align-items: center; gap: 8px;">
-                  <span class="txn-badge badge-credit">CREDIT</span>
-                  <strong style="font-size: 0.95rem;">Monthly Salary HDFC</strong>
-                </div>
-                <div class="mono" style="font-size: 0.75rem; color: var(--text-faint); margin-top: 4px;">
-                  HDFC Bank · Auto-Categorized: Income
-                </div>
-              </div>
-              <div class="mono" style="font-weight: 700; color: var(--accent-mint);">+ ₹1,45,000.00</div>
-            </div>
-
-            <div class="txn-row">
-              <div>
-                <div style="display: flex; align-items: center; gap: 8px;">
-                  <span class="txn-badge badge-debit">DEBIT</span>
-                  <strong style="font-size: 0.95rem;">CRED Card Settlement</strong>
-                </div>
-                <div class="mono" style="font-size: 0.75rem; color: var(--text-faint); margin-top: 4px;">
-                  CRED App · Auto-Categorized: Credit Bill
-                </div>
-              </div>
-              <div class="mono" style="font-weight: 700; color: #F8FAFC;">- ₹18,450.00</div>
-            </div>
+          <div class="terminal-body" id="liveFeedContainer">
+            <!-- Feed Items rendered dynamically by JS -->
           </div>
         </div>
 
@@ -123,70 +87,82 @@
     </div>
   </section>
 
-  <!-- Section 2: Interactive Permission Audit Matrix -->
-  <section id="audit" style="background: var(--bg-paper-raised);">
+  <!-- Section 2: Core Platform Capabilities -->
+  <section id="features" style="background: var(--bg-raised);">
     <div class="container">
       <div style="text-align: left; max-width: 600px; margin-bottom: 32px;">
-        <span class="hero-tag" style="background: rgba(6, 182, 212, 0.1); color: #06B6D4; border-color: rgba(6, 182, 212, 0.3);">
-          Consent & Permission Matrix
+        <span class="pulse-badge" style="background: rgba(6, 182, 212, 0.1); color: #06B6D4; border-color: rgba(6, 182, 212, 0.3);">
+          Architecture Specs
         </span>
-        <h2 style="margin-top: 8px;">Zero SMS Inbox Scraping</h2>
-        <p>VITT replaces invasive SMS permissions with a privacy-preserving Notification Listener Service.</p>
+        <h2 style="margin-top: 10px;">Engineered for Data Sovereignty</h2>
+        <p>A local-first financial companion designed specifically for India's digital ecosystem.</p>
       </div>
 
-      <div class="audit-matrix">
-        <div class="audit-card">
-          <div class="audit-header">
-            <strong>READ_SMS Permission</strong>
-            <span class="status-tag tag-blocked">NEVER REQUESTED</span>
-          </div>
-          <p style="font-size: 0.88rem;">Your personal SMS inbox, OTPs, and private messages are completely inaccessible to VITT.</p>
+      <div class="grid-features">
+        <div class="craft-card">
+          <div class="icon-box">🔔</div>
+          <h3>Notification Listener Engine</h3>
+          <p>Captures UPI and banking app notifications (GPay, Paytm, HDFC, CRED) instantly on-device. Zero SMS inbox reading required.</p>
         </div>
 
-        <div class="audit-card">
-          <div class="audit-header">
-            <strong>Notification Listener</strong>
-            <span class="status-tag tag-safe">GRANULAR OPT-IN</span>
-          </div>
-          <p style="font-size: 0.88rem;">Parses only financial notifications. Personal chats (WhatsApp, Instagram) are filtered out on-device.</p>
+        <div class="craft-card">
+          <div class="icon-box">🔐</div>
+          <h3>AES-256 SQLCipher Vault</h3>
+          <p>Financial records are saved in a hardware-encrypted SQLite database using `FlutterSecureStorage` key derivation.</p>
         </div>
 
-        <div class="audit-card">
-          <div class="audit-header">
-            <strong>Local Encrypted Storage</strong>
-            <span class="status-tag tag-safe">AES-256 SQLCIPHER</span>
-          </div>
-          <p style="font-size: 0.88rem;">Database `vitt.db` is encrypted at rest using hardware-backed keys via `FlutterSecureStorage`.</p>
+        <div class="craft-card">
+          <div class="icon-box">⚡</div>
+          <h3>TurboVec SIMD Search</h3>
+          <p>Executes 256-dimension vector search queries over 10,000+ embeddings at 134M dim-ops/sec using compiled Rust FFI binaries.</p>
+        </div>
+
+        <div class="craft-card">
+          <div class="icon-box">👁️</div>
+          <h3>Vernacular ML Kit OCR</h3>
+          <p>Parses scanned receipts and bills in English and Devanagari (Hindi) completely offline on device hardware.</p>
+        </div>
+
+        <div class="craft-card">
+          <div class="icon-box">📈</div>
+          <h3>30/60/90 Day Cashflow Forecast</h3>
+          <p>Predicts financial runway based on income velocity and scheduled bill payments without cloud processing.</p>
+        </div>
+
+        <div class="craft-card">
+          <div class="icon-box">🏛️</div>
+          <h3>Government Scheme Matching</h3>
+          <p>Matches entrepreneurs and small business owners with MUDRA, PMEGP, and Startup India government schemes.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section 3: Interactive Vector RAG Demo -->
+  <!-- Section 3: Animated Typewriter Vector RAG Demo -->
   <section id="vector">
     <div class="container">
       <div style="max-width: 640px; margin-bottom: 24px;">
-        <h2>Rust FFI Vector SIMD Engine</h2>
-        <p>Search your transaction history using natural language queries powered by 256-dimension vector embeddings.</p>
+        <h2>On-Device RAG Vector Search</h2>
+        <p>Query your transaction history naturally with instant SIMD vector matching.</p>
       </div>
 
-      <div class="vector-box">
-        <div class="search-bar-sim">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-mint)" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <div class="search-input-sim">"How much did I spend on food & dining last month?"</div>
-          <span class="mono" style="font-size: 0.75rem; background: var(--accent-mint-soft); color: var(--accent-mint); padding: 4px 10px; border-radius: 4px;">
+      <div class="vector-widget">
+        <div class="search-box-animated">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--emerald)" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <div class="typewriter-text" id="typewriterTarget">"Where did I spend money on coffee?"<span class="cursor-blink"></span></div>
+          <span class="mono" style="font-size: 0.78rem; background: var(--emerald-soft); color: var(--emerald); padding: 4px 12px; border-radius: 4px; border: 1px solid rgba(16, 185, 129, 0.3);">
             134.7M SIMD ops/sec
           </span>
         </div>
 
-        <div class="sim-result-card">
+        <div style="background: #09111E; border: 1px solid var(--card-border); padding: 20px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: space-between;">
           <div>
-            <div style="font-weight: 700; color: var(--text-main);">Found 14 matching transactions</div>
-            <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 2px;">
-              Vector Cosine Similarity Score: <span class="mono" style="color: var(--accent-mint);">0.9842</span> · Processing Time: <span class="mono" style="color: var(--accent-mint);">1.2 ms</span>
+            <div style="font-weight: 700; color: var(--text-main); font-size: 1.05rem;">Matched 14 Transactions (Starbucks, Third Wave, Blue Tokai)</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">
+              Similarity Score: <span class="mono" style="color: var(--emerald); font-weight: 700;">0.9842</span> · Processing Latency: <span class="mono" style="color: var(--emerald); font-weight: 700;">1.2 ms</span>
             </div>
           </div>
-          <div class="mono" style="font-size: 1.1rem; font-weight: 700; color: var(--accent-mint);">
+          <div class="mono" style="font-size: 1.25rem; font-weight: 800; color: var(--emerald);">
             ₹12,450.00
           </div>
         </div>
@@ -194,7 +170,7 @@
     </div>
   </section>
 
-  <!-- Footer (Ft5 Statement Footer) -->
+  <!-- Footer -->
   <footer>
     <div class="container">
       <div class="footer-grid">
@@ -204,7 +180,7 @@
               <rect width="32" height="32" rx="8" fill="#10B981"/>
               <path d="M8 12L16 22L24 12" stroke="#022C22" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <span>VITT Engine</span>
+            <span>VITT Platform</span>
           </div>
           <p style="font-size: 0.9rem; max-width: 320px;">
             Sovereign personal finance platform for India. Developed by Kilani Sai Nikhil.
@@ -212,7 +188,7 @@
         </div>
 
         <div>
-          <h4 style="font-size: 0.85rem; font-family: var(--font-mono); text-transform: uppercase; margin-bottom: 12px;">Product</h4>
+          <h4 style="font-size: 0.85rem; font-family: var(--font-mono); text-transform: uppercase; margin-bottom: 12px; color: var(--text-main);">Product</h4>
           <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.9rem;">
             <li><a href="https://github.com/nikhil49023/VITT/releases/latest" class="nav-link">Download APK v3.0.0</a></li>
             <li><a href="https://github.com/nikhil49023/VITT" class="nav-link">GitHub Repository</a></li>
@@ -220,7 +196,7 @@
         </div>
 
         <div>
-          <h4 style="font-size: 0.85rem; font-family: var(--font-mono); text-transform: uppercase; margin-bottom: 12px;">Legal</h4>
+          <h4 style="font-size: 0.85rem; font-family: var(--font-mono); text-transform: uppercase; margin-bottom: 12px; color: var(--text-main);">Legal</h4>
           <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.9rem;">
             <li><a href="privacy.html" class="nav-link">Privacy Policy (DPDP 2023)</a></li>
             <li><a href="terms.html" class="nav-link">Terms of Service</a></li>
@@ -228,14 +204,14 @@
         </div>
 
         <div>
-          <h4 style="font-size: 0.85rem; font-family: var(--font-mono); text-transform: uppercase; margin-bottom: 12px;">Contact</h4>
-          <p style="font-size: 0.85rem; color: var(--text-muted);">
-            <a href="mailto:developer.nikhil49023@gmail.com" style="color: var(--accent-mint);">developer.nikhil49023@gmail.com</a>
+          <h4 style="font-size: 0.85rem; font-family: var(--font-mono); text-transform: uppercase; margin-bottom: 12px; color: var(--text-main);">Contact</h4>
+          <p style="font-size: 0.85rem;">
+            <a href="mailto:developer.nikhil49023@gmail.com" style="color: var(--emerald);">developer.nikhil49023@gmail.com</a>
           </p>
         </div>
       </div>
 
-      <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--card-border); padding: 14px; border-radius: 8px; font-size: 0.8rem; color: var(--text-faint);">
+      <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--card-border); padding: 14px 18px; border-radius: 8px; font-size: 0.8rem; color: var(--text-faint);">
         <strong>⚠️ SEBI RIA Disclaimer:</strong> VITT is an educational personal finance management platform. It is NOT a SEBI-registered Investment Adviser under SEBI Regulations 2013. AI advisory outputs are for informational purposes only.
       </div>
 
@@ -246,5 +222,6 @@
     </div>
   </footer>
 
+  <script src="app.js"></script>
 </body>
 </html>
