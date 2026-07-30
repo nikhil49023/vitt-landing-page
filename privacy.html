@@ -6,27 +6,59 @@
   <title>VITT — Privacy Policy (DPDP 2023 & Play Store Compliant)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
     .policy-content {
-      max-width: 800px;
-      margin: 120px auto 60px auto;
+      max-width: 820px;
+      margin: 100px auto 60px auto;
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: var(--radius-lg);
-      padding: var(--space-2xl);
+      padding: 40px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
     }
-    .policy-content h1 { margin-bottom: var(--space-md); }
-    .policy-content h2 { margin-top: var(--space-xl); margin-bottom: var(--space-sm); font-size: 1.35rem; }
-    .policy-content p, .policy-content li { color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 12px; }
-    .policy-content ul { padding-left: 20px; }
+    .policy-content h1 {
+      font-size: 2.2rem;
+      margin-bottom: 8px;
+    }
+    .policy-content h2 {
+      margin-top: 36px;
+      margin-bottom: 12px;
+      font-size: 1.35rem;
+      color: var(--text-main);
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 8px;
+    }
+    .policy-content p, .policy-content li {
+      color: #CBD5E1; /* High readability contrast */
+      font-size: 1.02rem;
+      line-height: 1.8;
+      margin-bottom: 14px;
+    }
+    .policy-content ul {
+      padding-left: 24px;
+      margin-bottom: 16px;
+    }
+    .policy-content li {
+      margin-bottom: 10px;
+    }
     .highlight-box {
-      background: var(--accent-primary-soft);
-      border-left: 4px solid var(--accent-primary);
-      padding: var(--space-md);
-      margin: var(--space-md) 0;
+      background: rgba(16, 185, 129, 0.08);
+      border-left: 4px solid var(--emerald);
+      padding: 20px;
+      margin: 24px 0;
       border-radius: var(--radius-sm);
+    }
+    .contact-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--card-border);
+      padding: 20px;
+      border-radius: var(--radius-md);
+      margin-top: 16px;
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      line-height: 1.8;
     }
   </style>
 </head>
@@ -36,61 +68,61 @@
   <div class="nav-wrapper">
     <nav class="nav-pill">
       <a href="index.html" class="nav-brand">
-        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
           <rect width="32" height="32" rx="8" fill="#10B981"/>
-          <path d="M8 12L16 22L24 12" stroke="#042F22" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8 12L16 22L24 12" stroke="#022C22" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         <span>VITT Policy</span>
       </a>
-      <a href="index.html" class="btn btn-secondary" style="padding: 6px 14px; font-size: 0.85rem;">← Back to Main Site</a>
+      <a href="index.html" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.88rem;">← Back to Main Site</a>
     </nav>
   </div>
 
   <div class="container">
     <div class="policy-content">
       <h1>VITT Privacy Policy</h1>
-      <p class="mono" style="font-size: 0.85rem; color: var(--accent-primary);">Last Updated: July 30, 2026 · Version 3.0.0 · Compliance: DPDP Act 2023 & RBI Guidelines</p>
+      <p class="mono" style="font-size: 0.88rem; color: var(--emerald);">Last Updated: July 30, 2026 · Version 3.0.0 · Compliance: DPDP Act 2023 & RBI Guidelines</p>
 
       <div class="highlight-box">
-        <strong>🔒 Summary of Core Privacy Guarantees:</strong>
-        <ul style="margin-top: 8px; margin-bottom: 0;">
-          <li>Zero <code>READ_SMS</code> permissions requested. We never read your private SMS inbox.</li>
-          <li>All transaction data is stored 100% locally in an <strong>AES-256 SQLCipher encrypted SQLite database</strong>.</li>
-          <li>Zero financial data, bank account details, or transaction histories are uploaded to cloud servers.</li>
+        <strong style="color: var(--text-main); font-size: 1.05rem;">🔒 Core Privacy Guarantees:</strong>
+        <ul style="margin-top: 10px; margin-bottom: 0;">
+          <li><strong>Zero <code>READ_SMS</code> Permissions Requested:</strong> We never read or access your private SMS inbox.</li>
+          <li><strong>On-Device Encryption:</strong> All transaction records are stored exclusively in an <strong>AES-256 SQLCipher encrypted SQLite database</strong> on your physical device hardware.</li>
+          <li><strong>Zero Telemetry:</strong> No financial data, account numbers, or transaction histories are uploaded to cloud servers.</li>
         </ul>
       </div>
 
       <h2 id="dpdp">1. Compliance with Digital Personal Data Protection (DPDP) Act 2023</h2>
-      <p>Under India's Digital Personal Data Protection Act, 2023 (DPDP Act), VITT operates as a Data Fiduciary enforcing data minimization, explicit consent, and local-first data processing. Financial records remain exclusively under user custody on physical device hardware.</p>
+      <p>In accordance with India's Digital Personal Data Protection Act, 2023 (DPDP Act), VITT operates as a Data Fiduciary enforcing data minimization, explicit consent, and local-first processing. All financial records remain under exclusive user control on your physical device hardware.</p>
 
       <h2>2. Information Collection & Processing</h2>
       <ul>
-        <li><strong>Transaction Data (Notification Listener):** Extracted locally from banking app notifications (Google Pay, Paytm, PhonePe, HDFC, ICICI, SBI). Stored in local AES-256 SQLite (`vitt.db`). Never transmitted externally.</li>
-        <li><strong>Authentication Data:** Google Sign-In Name and Email via Firebase Authentication for identity verification.</strong></li>
-        <li><strong>Crash Data:** Anonymous stack traces via Firebase Crashlytics to monitor app stability.</strong></li>
+        <li><strong>Transaction Data (Notification Listener):</strong> Extracted locally from banking app notifications (Google Pay, Paytm, PhonePe, HDFC, ICICI, SBI, CRED). Stored in encrypted local SQLite (`vitt.db`). Never transmitted to external servers.</li>
+        <li><strong>Authentication Data:</strong> Google Sign-In Name and Email via Firebase Authentication for identity verification.</li>
+        <li><strong>Crash Reporting:</strong> Anonymous stack traces via Firebase Crashlytics to monitor app stability.</li>
       </ul>
 
       <h2>3. Prominent Disclosure for Notification Listener Access</h2>
-      <p>Notification Access is **disabled by default**. Before requesting system settings access, VITT presents an explicit prominent disclosure explaining that notification access is used solely to parse financial transactions and automatically excludes personal chat apps (WhatsApp, Instagram, Telegram).</p>
+      <p>Notification Access is <strong>disabled by default</strong> upon installation. Before directing users to Android System Settings, VITT presents an explicit prominent disclosure explaining that notification access is used solely to parse financial transactions and automatically excludes personal chat applications (WhatsApp, Instagram, Telegram).</p>
 
       <h2>4. Data Erasure & Withdrawal of Consent</h2>
-      <p>You can revoke notification access at any time via Android System Settings. To permanently delete all stored data, navigate to <strong>Settings → Delete My Account</strong> in the VITT app, which purges the local SQLite database and Firebase auth records.</p>
+      <p>You can revoke Notification Access at any time via Android System Settings. To permanently delete all stored data, navigate to <strong>Settings → Delete My Account</strong> in the VITT app, which purges the local SQLite database and Firebase authentication records instantly.</p>
 
       <h2>5. Designated Grievance Officer & Contact</h2>
       <p>In compliance with Rule 3(2) of the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021 and DPDP Act 2023, queries or grievances regarding data privacy may be addressed to:</p>
 
-      <div style="background: rgba(255,255,255,0.04); border: 1px solid var(--card-border); padding: 16px; border-radius: 8px; margin-top: 12px; font-family: var(--font-mono); font-size: 0.85rem;">
-        <strong>Data Protection & Grievance Contact:</strong><br>
+      <div class="contact-box">
+        <strong style="color: var(--emerald);">Data Protection & Nodal Grievance Contact:</strong><br>
         Kilani Sai Nikhil (Solo Developer)<br>
-        Email: <a href="mailto:developer.nikhil49023@gmail.com" style="color: var(--accent-primary);">developer.nikhil49023@gmail.com</a><br>
+        Email: <a href="mailto:developer.nikhil49023@gmail.com" style="color: var(--emerald); text-decoration: underline;">developer.nikhil49023@gmail.com</a><br>
         Response Time: Acknowledgement within 48 hours
       </div>
     </div>
   </div>
 
   <footer>
-    <div class="container" style="text-align: center; font-size: 0.85rem; color: var(--text-faint);">
-      &copy; 2026 VITT Personal Finance · <a href="index.html" style="color: var(--accent-primary);">Home Page</a> · <a href="terms.html" style="color: var(--accent-primary);">Terms of Service</a>
+    <div class="container" style="text-align: center; font-size: 0.88rem; color: var(--text-faint);">
+      &copy; 2026 VITT Personal Finance · <a href="index.html" style="color: var(--emerald);">Home Page</a> · <a href="terms.html" style="color: var(--emerald);">Terms of Service</a>
     </div>
   </footer>
 

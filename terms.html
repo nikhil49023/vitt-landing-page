@@ -3,23 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VITT — Terms of Service & SEBI RIA Disclaimer</title>
+  <title>VITT — Terms of Service & SEBI Disclaimer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
     .policy-content {
-      max-width: 800px;
-      margin: 120px auto 60px auto;
+      max-width: 820px;
+      margin: 100px auto 60px auto;
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: var(--radius-lg);
-      padding: var(--space-2xl);
+      padding: 40px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
     }
-    .policy-content h1 { margin-bottom: var(--space-md); }
-    .policy-content h2 { margin-top: var(--space-xl); margin-bottom: var(--space-sm); font-size: 1.35rem; }
-    .policy-content p, .policy-content li { color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 12px; }
+    .policy-content h1 {
+      font-size: 2.2rem;
+      margin-bottom: 8px;
+    }
+    .policy-content h2 {
+      margin-top: 36px;
+      margin-bottom: 12px;
+      font-size: 1.35rem;
+      color: var(--text-main);
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 8px;
+    }
+    .policy-content p, .policy-content li {
+      color: #CBD5E1; /* High readability contrast */
+      font-size: 1.02rem;
+      line-height: 1.8;
+      margin-bottom: 14px;
+    }
+    .warning-box {
+      background: rgba(245, 158, 11, 0.08);
+      border-left: 4px solid var(--amber);
+      padding: 20px;
+      margin: 24px 0;
+      border-radius: var(--radius-sm);
+    }
   </style>
 </head>
 <body>
@@ -28,38 +51,48 @@
   <div class="nav-wrapper">
     <nav class="nav-pill">
       <a href="index.html" class="nav-brand">
-        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
           <rect width="32" height="32" rx="8" fill="#10B981"/>
           <path d="M8 12L16 22L24 12" stroke="#042F22" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         <span>VITT Terms</span>
       </a>
-      <a href="index.html" class="btn btn-secondary" style="padding: 6px 14px; font-size: 0.85rem;">← Back to Main Site</a>
+      <a href="index.html" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.88rem;">← Back to Main Site</a>
     </nav>
   </div>
 
   <div class="container">
     <div class="policy-content">
       <h1>Terms of Service</h1>
-      <p class="mono" style="font-size: 0.85rem; color: var(--accent-primary);">Version 3.0.0 · Governed by the Laws of India</p>
+      <p class="mono" style="font-size: 0.88rem; color: var(--emerald);">Version 3.0.0 · Governed by the Laws of India</p>
 
-      <h2>1. SEBI Non-Advisory Disclaimer</h2>
-      <p><strong>VITT / Artha is NOT a SEBI-registered Investment Adviser</strong> under the SEBI (Investment Advisers) Regulations, 2013, nor a Research Analyst under SEBI (Research Analysts) Regulations, 2014. All AI-generated advisory outputs, financial summaries, and budget suggestions are for **educational and informational purposes only** and do not constitute financial advice, tax guidance, or investment recommendations.</p>
+      <div class="warning-box">
+        <strong style="color: var(--text-main); font-size: 1.05rem;">⚠️ Mandatory SEBI Non-Advisory Disclaimer:</strong>
+        <p style="margin-top: 8px; margin-bottom: 0; color: #E2E8F0;">
+          <strong>VITT / Artha is NOT a SEBI-registered Investment Adviser</strong> under the SEBI (Investment Advisers) Regulations, 2013, nor a Research Analyst under SEBI (Research Analysts) Regulations, 2014. All AI-generated advisory outputs, financial summaries, and budget suggestions are for <strong>educational and informational purposes only</strong> and do not constitute financial advice, tax guidance, or securities investment recommendations.
+        </p>
+      </div>
+
+      <h2>1. Nature of Application</h2>
+      <p>VITT is a Personal Finance Management (PFM) tool designed for transaction categorization, budget tracking, and cashflow forecasting. VITT does not operate as a bank, payment gateway, micro-lending platform, or financial broker.</p>
 
       <h2>2. Non-Lending & Non-Credit Declaration</h2>
-      <p>VITT is a Personal Finance Management (PFM) tool. It does not provide personal loans, micro-lending, Buy-Now-Pay-Later (BNPL) credit facilities, or financial intermediation services.</p>
+      <p>VITT does not issue personal loans, micro-loans, Buy-Now-Pay-Later (BNPL) lines of credit, or debt restructuring services. It is purely a local data utility application.</p>
 
       <h2>3. Limitation of Liability</h2>
-      <p>VITT is provided "as is" by an independent solo developer without warranties of any kind. The developer shall not be liable for financial decisions or inaccuracies arising from transaction parsing.</p>
+      <p>VITT is provided "as is" by an independent solo developer without warranties of any kind. The developer shall not be held liable for financial decisions, calculations, or parsing inaccuracies arising from mobile usage.</p>
 
-      <h2>4. Contact</h2>
-      <p>Email: <a href="mailto:developer.nikhil49023@gmail.com" style="color: var(--accent-primary);">developer.nikhil49023@gmail.com</a></p>
+      <h2>4. Developer Contact</h2>
+      <p>Queries regarding Terms of Service may be submitted to:</p>
+      <div style="font-family: var(--font-mono); font-size: 0.9rem; color: var(--emerald); margin-top: 8px;">
+        Email: <a href="mailto:developer.nikhil49023@gmail.com" style="color: var(--emerald); text-decoration: underline;">developer.nikhil49023@gmail.com</a>
+      </div>
     </div>
   </div>
 
   <footer>
-    <div class="container" style="text-align: center; font-size: 0.85rem; color: var(--text-faint);">
-      &copy; 2026 VITT Personal Finance · <a href="index.html" style="color: var(--accent-primary);">Home Page</a> · <a href="privacy.html" style="color: var(--accent-primary);">Privacy Policy</a>
+    <div class="container" style="text-align: center; font-size: 0.88rem; color: var(--text-faint);">
+      &copy; 2026 VITT Personal Finance · <a href="index.html" style="color: var(--emerald);">Home Page</a> · <a href="privacy.html" style="color: var(--emerald);">Privacy Policy</a>
     </div>
   </footer>
 
