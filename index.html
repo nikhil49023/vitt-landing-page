@@ -9,6 +9,24 @@
 </head>
 <body>
 
+  <!-- Animated Tree Organic SVG Background -->
+  <div class="tree-bg-container">
+    <svg class="tree-branch tree-left" viewBox="0 0 300 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M-10 450 C 40 350, 80 250, 120 150 C 140 100, 180 50, 260 10" stroke-width="4"/>
+      <path d="M80 250 C 130 220, 180 210, 240 220" stroke-width="2.5"/>
+      <path d="M120 150 C 170 120, 210 110, 270 130" stroke-width="2"/>
+    </svg>
+
+    <svg class="tree-branch tree-right" viewBox="0 0 350 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M-10 500 C 60 400, 100 280, 150 180 C 180 120, 220 60, 310 10" stroke-width="4"/>
+      <path d="M100 280 C 160 250, 220 240, 290 250" stroke-width="2.5"/>
+    </svg>
+
+    <svg class="floating-leaf leaf-1" width="24" height="24" viewBox="0 0 24 24"><path d="M17 8C8 10 5 16 3 21C8 21 14 19 17 8Z"/></svg>
+    <svg class="floating-leaf leaf-2" width="28" height="28" viewBox="0 0 24 24"><path d="M17 8C8 10 5 16 3 21C8 21 14 19 17 8Z"/></svg>
+    <svg class="floating-leaf leaf-3" width="22" height="22" viewBox="0 0 24 24"><path d="M17 8C8 10 5 16 3 21C8 21 14 19 17 8Z"/></svg>
+  </div>
+
   <!-- Floating Nav Pill Bar -->
   <div class="nav-wrapper">
     <nav class="nav-pill">
@@ -35,7 +53,7 @@
 
   <!-- Friendly Hero Section -->
   <section class="hero">
-    <div class="container">
+    <div class="container reveal">
       <div class="friendly-badge">
         <span class="pulse-dot"></span>
         <span>🇮🇳 Built for India · 100% Free & Private</span>
@@ -62,7 +80,7 @@
       </div>
 
       <!-- Consumer Metrics Bar -->
-      <div class="consumer-metrics">
+      <div class="consumer-metrics reveal">
         <div class="metric-box">
           <div class="metric-val">Instant</div>
           <div class="metric-lbl">Auto UPI Tracking</div>
@@ -84,46 +102,46 @@
     </div>
   </section>
 
-  <!-- Friendly Features Grid -->
+  <!-- Friendly Features Grid with Scroll Reveal -->
   <section id="features" style="background: var(--bg-raised);">
     <div class="container">
-      <div style="text-align: center; max-width: 580px; margin: 0 auto 40px auto;">
+      <div style="text-align: center; max-width: 580px; margin: 0 auto 40px auto;" class="reveal">
         <h2>Everything You Need to Master Your Money</h2>
         <p>Simple tools designed for everyday spending, savings, and financial peace of mind.</p>
       </div>
 
       <div class="friendly-grid">
-        <div class="friendly-card">
+        <div class="friendly-card reveal">
           <div class="feature-emoji">📲</div>
           <h3>Auto-Track Payments</h3>
           <p>Never type an expense again. VITT reads your bank notifications to log GPay, Paytm, PhonePe, and card spending automatically.</p>
         </div>
 
-        <div class="friendly-card">
+        <div class="friendly-card reveal">
           <div class="feature-emoji">💬</div>
           <h3>Friendly AI Money Advisor</h3>
           <p>Ask questions about your monthly budget in plain Hindi or English. Get instant, helpful advice anytime on your phone.</p>
         </div>
 
-        <div class="friendly-card">
+        <div class="friendly-card reveal">
           <div class="feature-emoji">📅</div>
           <h3>Bill & EMI Reminders</h3>
           <p>Never pay late fees again. Get timely alerts for utility bills, credit card payments, rent, and recurring subscriptions.</p>
         </div>
 
-        <div class="friendly-card">
+        <div class="friendly-card reveal">
           <div class="feature-emoji">🧾</div>
           <h3>Smart Receipt Scanner</h3>
           <p>Snap a photo of any bill or receipt to automatically extract totals and organize your receipts completely offline.</p>
         </div>
 
-        <div class="friendly-card">
+        <div class="friendly-card reveal">
           <div class="feature-emoji">📊</div>
           <h3>30/60/90 Day Cashflow Forecast</h3>
           <p>Know exactly how long your money will last with smart cashflow projections based on your income and spending habits.</p>
         </div>
 
-        <div class="friendly-card">
+        <div class="friendly-card reveal">
           <div class="feature-emoji">🌾</div>
           <h3>Government Scheme Finder</h3>
           <p>Discover government benefits and schemes (MUDRA, PMEGP, Startup India) tailored for small businesses, entrepreneurs, and families.</p>
@@ -135,13 +153,13 @@
   <!-- Section 3: Privacy & Security Comparison -->
   <section id="privacy">
     <div class="container">
-      <div style="text-align: center; max-width: 580px; margin: 0 auto 40px auto;">
+      <div style="text-align: center; max-width: 580px; margin: 0 auto 40px auto;" class="reveal">
         <h2>Your Money Data Belongs Only to You</h2>
         <p>We built VITT so you never have to choose between convenience and privacy.</p>
       </div>
 
       <div class="friendly-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
-        <div class="friendly-card" style="border-top: 4px solid #EF4444;">
+        <div class="friendly-card reveal" style="border-top: 4px solid #EF4444;">
           <h3 style="color: #FCA5A5;">Traditional Cloud Apps</h3>
           <ul style="list-style: none; margin-top: 16px; line-height: 2; color: var(--text-muted);">
             <li>❌ Asks for invasive <code>READ_SMS</code> inbox access</li>
@@ -150,7 +168,7 @@
           </ul>
         </div>
 
-        <div class="friendly-card" style="border-top: 4px solid var(--emerald);">
+        <div class="friendly-card reveal" style="border-top: 4px solid var(--emerald);">
           <h3 style="color: #A7F3D0;">VITT Sovereign App</h3>
           <ul style="list-style: none; margin-top: 16px; line-height: 2; color: var(--text-muted);">
             <li>✅ <strong>Zero SMS permissions requested</strong></li>
@@ -162,7 +180,7 @@
     </div>
   </section>
 
-  <!-- Footer (Ft5 Statement Footer) -->
+  <!-- Footer -->
   <footer>
     <div class="container">
       <div class="footer-grid">
@@ -215,5 +233,6 @@
     </div>
   </footer>
 
+  <script src="app.js"></script>
 </body>
 </html>

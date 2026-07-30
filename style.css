@@ -1,27 +1,22 @@
 /* ─────────────────────────────────────────────────────────────
-   VITT Sovereign Personal Finance — Friendly Consumer Design System
-   Inspired by: Friendly Accounting Services & Warm Human Tech
-   Palette: Deep Emerald (#081912), Fresh Mint (#10B981), Soft Sage (#ECFDF5), Card Dark (#0E291F)
-   Typography: Plus Jakarta Sans (Friendly Display & UI)
+   VITT Sovereign Personal Finance — Friendly Organic Tree Animation System
+   Features: Animated Background Tree Branches, Floating Leaves, Smooth Scroll Reveals
    ───────────────────────────────────────────────────────────── */
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap');
 
 :root {
-  --bg-dark: #081912;
-  --bg-raised: #0E291F;
-  --card-bg: #123327;
-  --card-bg-hover: #184233;
+  --bg-dark: #071710;
+  --bg-raised: #0D241A;
+  --card-bg: #123325;
+  --card-bg-hover: #184231;
   --card-border: rgba(255, 255, 255, 0.08);
   --card-border-active: rgba(16, 185, 129, 0.4);
 
   --emerald: #10B981;
   --emerald-soft: rgba(16, 185, 129, 0.12);
   --mint-light: #A7F3D0;
-  --sage-cream: #ECFDF5;
-
   --amber: #F59E0B;
-  --cyan: #06B6D4;
 
   --text-main: #F8FAFC;
   --text-muted: #94A3B8;
@@ -59,14 +54,68 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: clip;
-  background-image: 
-    radial-gradient(circle at 20% 15%, rgba(16, 185, 129, 0.08) 0%, transparent 45%),
-    radial-gradient(circle at 80% 65%, rgba(6, 182, 212, 0.05) 0%, transparent 45%);
+  position: relative;
+}
+
+/* Organic Tree Background Animations */
+.tree-bg-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  opacity: 0.12;
+}
+
+.tree-branch {
+  position: absolute;
+  stroke: var(--emerald);
+  stroke-linecap: round;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: growBranch 4s var(--ease-spring) forwards;
+}
+
+.tree-left {
+  top: -50px;
+  left: -40px;
+  width: 320px;
+  height: 480px;
+}
+
+.tree-right {
+  bottom: -60px;
+  right: -50px;
+  width: 380px;
+  height: 520px;
+  transform: scaleX(-1);
+}
+
+@keyframes growBranch {
+  to { stroke-dashoffset: 0; }
+}
+
+.floating-leaf {
+  position: absolute;
+  fill: var(--emerald);
+  opacity: 0.6;
+  animation: floatLeaf 8s ease-in-out infinite alternate;
+}
+
+.leaf-1 { top: 15%; left: 8%; animation-delay: 0s; }
+.leaf-2 { top: 40%; right: 12%; animation-delay: 2s; }
+.leaf-3 { bottom: 20%; left: 15%; animation-delay: 4s; }
+
+@keyframes floatLeaf {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-20px) rotate(15deg); }
 }
 
 a { color: inherit; text-decoration: none; }
 
-/* Friendly Headings */
 h1, h2, h3, h4 {
   font-weight: 800;
   line-height: 1.15;
@@ -87,11 +136,13 @@ p { color: var(--text-muted); font-size: 1.05rem; }
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 24px;
+  position: relative;
+  z-index: 1;
 }
 
-section { padding: 80px 0; }
+section { padding: 90px 0; position: relative; z-index: 1; }
 
-/* Friendly Floating Nav */
+/* Nav */
 .nav-wrapper {
   position: sticky;
   top: 16px;
@@ -107,7 +158,7 @@ section { padding: 80px 0; }
   justify-content: space-between;
   width: 100%;
   max-width: 960px;
-  background: rgba(14, 41, 31, 0.88);
+  background: rgba(13, 36, 26, 0.88);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--card-border);
@@ -141,7 +192,6 @@ section { padding: 80px 0; }
 
 .nav-link:hover { color: var(--emerald); }
 
-/* Friendly Badges & Pills */
 .friendly-badge {
   display: inline-flex;
   align-items: center;
@@ -162,9 +212,15 @@ section { padding: 80px 0; }
   background: var(--emerald);
   border-radius: 50%;
   box-shadow: 0 0 10px var(--emerald);
+  animation: pulse 2s infinite;
 }
 
-/* Friendly Action Buttons */
+@keyframes pulse {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -203,7 +259,6 @@ section { padding: 80px 0; }
   transform: translateY(-2px);
 }
 
-/* Hero Section */
 .hero {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -225,7 +280,6 @@ section { padding: 80px 0; }
   flex-wrap: wrap;
 }
 
-/* Consumer Metrics Bar */
 .consumer-metrics {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -245,7 +299,18 @@ section { padding: 80px 0; }
 .metric-val { font-size: 1.6rem; font-weight: 800; color: var(--emerald); margin-bottom: 2px; }
 .metric-lbl { font-size: 0.88rem; color: var(--text-muted); }
 
-/* Friendly Feature Grid */
+/* Scroll Reveal Animation Classes */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s var(--ease-spring);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .friendly-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -297,6 +362,8 @@ footer {
   border-top: 1px solid var(--card-border);
   padding: 60px 0 30px 0;
   margin-top: auto;
+  position: relative;
+  z-index: 1;
 }
 
 .footer-grid {
