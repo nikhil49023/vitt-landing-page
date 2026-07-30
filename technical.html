@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VITT — Technical & Security Architecture Overview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .tech-content {
+      max-width: 840px;
+      margin: 100px auto 60px auto;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    }
+    .tech-content h1 { font-size: 2.2rem; margin-bottom: 8px; }
+    .tech-content h2 { margin-top: 36px; margin-bottom: 12px; font-size: 1.35rem; color: var(--text-main); border-bottom: 1px solid var(--card-border); padding-bottom: 8px; }
+    .tech-content p, .tech-content li { color: #CBD5E1; font-size: 1.02rem; line-height: 1.8; margin-bottom: 14px; }
+    .tech-box { background: rgba(16, 185, 129, 0.08); border-left: 4px solid var(--emerald); padding: 20px; margin: 24px 0; border-radius: var(--radius-sm); font-family: var(--font-mono); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Nav -->
+  <div class="nav-wrapper">
+    <nav class="nav-pill">
+      <a href="index.html" class="nav-brand">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+          <rect width="32" height="32" rx="8" fill="#10B981"/>
+          <path d="M8 12L16 22L24 12" stroke="#022C22" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>VITT Technical Docs</span>
+      </a>
+      <a href="index.html" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.88rem;">← Back to Main Site</a>
+    </nav>
+  </div>
+
+  <div class="container">
+    <div class="tech-content">
+      <h1>Technical & Security Architecture Overview</h1>
+      <p class="mono" style="font-size: 0.88rem; color: var(--emerald);">For Developers, Auditors & Security Researchers · Version 3.0.0</p>
+
+      <div class="tech-box">
+        <strong>⚙️ Core Engineering Architecture Stack:</strong><br>
+        • Database: SQLite with AES-256 SQLCipher encryption at rest<br>
+        • Key Derivation: PBKDF2 via FlutterSecureStorage hardware keystore<br>
+        • Vector Search: TurboVec compiled C++/Rust FFI SIMD extensions (134.7M ops/sec)<br>
+        • AI Engine: On-device local LLM & Sarvam AI / Arya India Cloud API fallback<br>
+        • Vision OCR: Google ML Kit Latin & Devanagari text recognition
+      </div>
+
+      <h2>1. Privacy-Preserving Notification Listener Service</h2>
+      <p>Instead of requesting invasive <code>READ_SMS</code> permissions, VITT implements a custom Android <code>NotificationListenerService</code>. Incoming status bar notifications from recognized banking apps (GPay, Paytm, PhonePe, HDFC, SBI, CRED) are intercepted, parsed via regex matching, and logged locally. Unrelated notifications (WhatsApp, Telegram) are ignored instantly on-device.</p>
+
+      <h2>2. On-Device RAG & TurboVec Vector SIMD Engine</h2>
+      <p>VITT embeds transaction records into 256-dimensional vector representations. Using compiled native Rust FFI extensions (<code>libturbovec.so</code>), vector cosine similarity searches run at over 134 Million operations/sec directly on device hardware with sub-3ms latency, enabling natural language transaction queries without cloud vector database costs.</p>
+
+      <h2>3. Hardware-Backed Encryption at Rest</h2>
+      <p>All local database files (<code>vitt.db</code>) are encrypted using <code>sqflite_sqlcipher</code>. The 256-bit encryption key is dynamically generated on first launch and stored securely in Android KeyStore via <code>FlutterSecureStorage</code>.</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container" style="text-align: center; font-size: 0.88rem; color: var(--text-faint);">
+      &copy; 2026 VITT Personal Finance · <a href="index.html" style="color: var(--emerald);">Home Page</a> · <a href="privacy.html" style="color: var(--emerald);">Privacy Policy</a> · <a href="terms.html" style="color: var(--emerald);">Terms of Service</a>
+    </div>
+  </footer>
+
+</body>
+</html>
