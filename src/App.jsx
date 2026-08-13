@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, lazy, Suspense } from 'react';
 import SmoothScroll from './components/SmoothScroll';
 import CustomCursor from './components/CustomCursor';
 import ScrollProgressBar from './components/ScrollProgressBar';
@@ -7,22 +7,32 @@ import HeroSection from './components/HeroSection';
 import TrustBadges from './components/TrustBadges';
 import LogoCloud from './components/LogoCloud';
 import HowItWorks from './components/HowItWorks';
-import AiPlayground from './components/AiPlayground';
-import InteractiveSipCalculator from './components/InteractiveSipCalculator';
-import FeatureSpotlight from './components/FeatureSpotlight';
-import PhoneShowcasePinned from './components/PhoneShowcasePinned';
-import ComparisonTable from './components/ComparisonTable';
-import LiveStatsTicker from './components/LiveStatsTicker';
 import FeatureBentoGrid from './components/FeatureBentoGrid';
 import LiveNotificationDemo from './components/LiveNotificationDemo';
 import TestimonialSection from './components/TestimonialSection';
 import FaqAccordion from './components/FaqAccordion';
-import ArchitectureSection from './components/ArchitectureSection';
 import CtaBanner from './components/CtaBanner';
 import Footer from './components/Footer';
 import ModalDialog from './components/ModalDialog';
 import LegalModalContent from './components/LegalModalContent';
 import TechnicalModalContent from './components/TechnicalModalContent';
+
+// Lazy load heavy components for better performance
+const AiPlayground = lazy(() => import('./components/AiPlayground'));
+const InteractiveSipCalculator = lazy(() => import('./components/InteractiveSipCalculator'));
+const FeatureSpotlight = lazy(() => import('./components/FeatureSpotlight'));
+const PhoneShowcasePinned = lazy(() => import('./components/PhoneShowcasePinned'));
+const ComparisonTable = lazy(() => import('./components/ComparisonTable'));
+const LiveStatsTicker = lazy(() => import('./components/LiveStatsTicker'));
+const ArchitectureSection = lazy(() => import('./components/ArchitectureSection'));
+const ArchitecturePipeline = lazy(() => import('./components/ArchitecturePipeline'));
+
+// Loading fallback component
+const LoadingFallback = () => (
+  <div className="flex items-center justify-center py-20">
+    <div className="w-8 h-8 border-2 border-elemental-sky/30 border-t-elemental-sky rounded-full animate-spin" />
+  </div>
+);
 
 export default function App() {
   const [legalOpen, setLegalOpen] = useState(false);
@@ -32,6 +42,11 @@ export default function App() {
     <SmoothScroll>
       <div className="min-h-screen bg-canvas text-elemental-water selection:bg-elemental-sky/20 selection:text-elemental-water relative overflow-hidden">
         
+        {/* Skip to main content - Accessibility */}
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
+
         {/* Scroll Progress Bar at Top */}
         <ScrollProgressBar />
 
@@ -45,7 +60,7 @@ export default function App() {
         />
 
         {/* Promotional Main Flow */}
-        <main className="relative">
+        <main id="main-content" className="relative">
           {/* Promotional Hero */}
           <HeroSection 
             onOpenTechnical={() => setTechnicalOpen(true)}
@@ -61,23 +76,26 @@ export default function App() {
           {/* 3 Simple Setup Steps */}
           <HowItWorks />
 
-          {/* Interactive AI Playground Sandbox */}
-          <AiPlayground />
+          {/* Lazy loaded components */}
+          <Suspense fallback={<LoadingFallback />}>
+            {/* Interactive AI Playground Sandbox */}
+            <AiPlayground />
 
-          {/* Interactive Wealth & SIP Calculator Widget */}
-          <InteractiveSipCalculator />
+            {/* Interactive Wealth & SIP Calculator Widget */}
+            <InteractiveSipCalculator />
 
-          {/* Landify Feature Spotlight Switcher */}
-          <FeatureSpotlight />
+            {/* Landify Feature Spotlight Switcher */}
+            <FeatureSpotlight />
 
-          {/* Pinned 3D Smartphone Feature Showcase */}
-          <PhoneShowcasePinned />
+            {/* Pinned 3D Smartphone Feature Showcase */}
+            <PhoneShowcasePinned />
 
-          {/* VITT vs Traditional Apps Comparison */}
-          <ComparisonTable />
+            {/* VITT vs Traditional Apps Comparison */}
+            <ComparisonTable />
 
-          {/* Statistics Ticker */}
-          <LiveStatsTicker />
+            {/* Statistics Ticker */}
+            <LiveStatsTicker />
+          </Suspense>
 
           {/* Vector Illustrated Feature Bento Grid */}
           <FeatureBentoGrid />
@@ -91,10 +109,15 @@ export default function App() {
           {/* Promotional FAQ */}
           <FaqAccordion />
 
-          {/* Technical Architecture Pipeline */}
-          <ArchitectureSection 
-            onOpenTechnical={() => setTechnicalOpen(true)}
-          />
+          <Suspense fallback={<LoadingFallback />}>
+            {/* Technical Architecture Pipeline */}
+            <ArchitecturePipeline />
+
+            {/* Technical Architecture Details */}
+            <ArchitectureSection 
+              onOpenTechnical={() => setTechnicalOpen(true)}
+            />
+          </Suspense>
 
           {/* High-Conversion Bottom CTA Banner */}
           <CtaBanner 
