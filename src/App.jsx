@@ -4,6 +4,7 @@ import CustomCursor from './components/CustomCursor';
 import ScrollProgressBar from './components/ScrollProgressBar';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
+import TrustBadges from './components/TrustBadges';
 import LogoCloud from './components/LogoCloud';
 import HowItWorks from './components/HowItWorks';
 import AiPlayground from './components/AiPlayground';
@@ -49,6 +50,9 @@ export default function App() {
             onOpenTechnical={() => setTechnicalOpen(true)}
             onOpenLegal={() => setLegalOpen(true)}
           />
+
+          {/* Trust Badges */}
+          <TrustBadges />
 
           {/* Supported Banks Ticker */}
           <LogoCloud />

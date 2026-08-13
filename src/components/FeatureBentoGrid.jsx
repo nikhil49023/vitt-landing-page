@@ -9,54 +9,61 @@ import {
   IllustrationCashflow, IllustrationKhata, IllustrationSecurity, 
   IllustrationGovt, IllustrationUPI 
 } from './illustrations/FeatureIllustrations';
+import { ScrollReveal, HoverEffect } from './animations';
 
 export default function FeatureBentoGrid() {
   return (
     <section id="features" className="py-20 px-4 md:px-8 max-w-7xl mx-auto relative z-10">
       
       {/* Section Header */}
-      <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-canvas-raised border border-elemental-sky/40 text-elemental-sky text-xs font-mono shadow-[0_0_15px_rgba(2,132,199,0.15)]">
-          <Sparkles className="w-3.5 h-3.5" />
-          <span>Feature Taxonomy & Visual Architecture</span>
+      <ScrollReveal>
+        <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-canvas-raised border border-elemental-sky/40 text-elemental-sky text-xs font-mono shadow-[0_0_15px_rgba(2,132,199,0.15)]">
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>Feature Taxonomy & Visual Architecture</span>
+          </div>
+
+          <h2 className="font-sans text-3xl sm:text-4xl font-extrabold text-elemental-water tracking-tight">
+            Engineered for Absolute Privacy
+          </h2>
+
+          <p className="text-sm text-sandstone-muted font-sans max-w-2xl mx-auto leading-relaxed">
+            Vector illustrations detailing VITT's 9 Live (🟢) and 2 Roadmap (⏳) features.
+          </p>
         </div>
-
-        <h2 className="font-sans text-3xl sm:text-4xl font-extrabold text-elemental-water tracking-tight">
-          Engineered for Absolute Privacy
-        </h2>
-
-        <p className="text-sm text-sandstone-muted font-sans max-w-2xl mx-auto leading-relaxed">
-          Vector illustrations detailing VITT's 9 Live (🟢) and 2 Roadmap (⏳) features.
-        </p>
-      </div>
+      </ScrollReveal>
 
       {/* Bento Grid Container */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
         {/* Card 1: Auto Notification Expense Detection (LIVE) */}
-        <div className="bento-card-container group relative p-6 rounded-3xl houdini-border hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between shadow-xs">
-          <div>
-            <div className="flex items-center justify-between mb-2">
-              <div className="w-10 h-10 rounded-xl bg-elemental-skySoft border border-elemental-sky/30 flex items-center justify-center text-elemental-sky">
-                <Bell className="w-5 h-5" />
+        <ScrollReveal delay={0.1}>
+          <HoverEffect scale={1.02} y={-8}>
+            <div className="bento-card-container group relative p-6 rounded-3xl houdini-border hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between shadow-xs">
+              <div>
+                <div className="flex items-center justify-between mb-2">
+                  <div className="w-10 h-10 rounded-xl bg-elemental-skySoft border border-elemental-sky/30 flex items-center justify-center text-elemental-sky">
+                    <Bell className="w-5 h-5" />
+                  </div>
+                  <span className="text-[11px] font-mono font-semibold px-2.5 py-1 rounded-full bg-elemental-skySoft text-elemental-sky border border-elemental-sky/30 flex items-center gap-1">
+                    <CheckCircle2 className="w-3 h-3" /> LIVE
+                  </span>
+                </div>
+
+                {/* Vector Illustration */}
+                <IllustrationNotification />
+
+                <h3 className="text-base font-bold text-elemental-water mb-1.5">Auto Expense Detection</h3>
+                <p className="text-xs text-sandstone-muted leading-relaxed mb-3">
+                  Captures transaction alerts from GPay, PhonePe, Paytm, SBI, HDFC, ICICI, and CRED via Android's <code className="font-mono text-elemental-water font-semibold">NotificationListenerService</code>.
+                </p>
               </div>
-              <span className="text-[11px] font-mono font-semibold px-2.5 py-1 rounded-full bg-elemental-skySoft text-elemental-sky border border-elemental-sky/30 flex items-center gap-1">
-                <CheckCircle2 className="w-3 h-3" /> LIVE
-              </span>
+              <div className="p-2.5 rounded-xl bg-canvas-raised border border-elemental-water/10 font-mono text-[11px] text-elemental-water font-semibold">
+                ✓ 0 SMS Permissions Required
+              </div>
             </div>
-
-            {/* Vector Illustration */}
-            <IllustrationNotification />
-
-            <h3 className="text-base font-bold text-elemental-water mb-1.5">Auto Expense Detection</h3>
-            <p className="text-xs text-sandstone-muted leading-relaxed mb-3">
-              Captures transaction alerts from GPay, PhonePe, Paytm, SBI, HDFC, ICICI, and CRED via Android's <code className="font-mono text-elemental-water font-semibold">NotificationListenerService</code>.
-            </p>
-          </div>
-          <div className="p-2.5 rounded-xl bg-canvas-raised border border-elemental-water/10 font-mono text-[11px] text-elemental-water font-semibold">
-            ✓ 0 SMS Permissions Required
-          </div>
-        </div>
+          </HoverEffect>
+        </ScrollReveal>
 
         {/* Card 2: On-Device AI Financial Advisor (LIVE) */}
         <div className="bento-card-container group relative p-6 rounded-3xl houdini-border hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between shadow-xs">

@@ -1,0 +1,7 @@
+export { default as ScrollReveal } from './ScrollReveal';
+export { default as HoverEffect } from './HoverEffect';
+export { default as ParallaxSection } from './ParallaxSection';
+export { default as TextGenerateEffect } from './TextGenerateEffect';
+export { default as Sparkles } from './Sparkles';
+export { default as BackgroundBeams } from './BackgroundBeams';
+export { default as WavyBackground } from './WavyBackground';

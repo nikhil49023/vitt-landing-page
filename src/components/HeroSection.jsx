@@ -1,8 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import { motion } from 'framer-motion';
 import { Download, ArrowRight, Lock, EyeOff, Cpu, Star, ShieldCheck, Sparkles, CheckCircle2 } from 'lucide-react';
 import PhoneMockup3D from './PhoneMockup3D';
 import FloatingRupeeCanvas from './FloatingRupeeCanvas';
+import { TextGenerateEffect, Sparkles as SparklesEffect } from './animations';
 
 export default function HeroSection({ onOpenTechnical, onOpenLegal }) {
   const heroRef = useRef(null);
@@ -53,10 +55,10 @@ export default function HeroSection({ onOpenTechnical, onOpenLegal }) {
           {/* Main Headline */}
           <div className="space-y-4">
             <h1 className="hero-anim-item font-sans text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-elemental-water leading-[1.12]">
-              Track Every Rupee.<br />
-              <span className="bg-gradient-to-r from-elemental-water via-elemental-sky to-elemental-sky bg-clip-text text-transparent">
-                Keep Every Byte Private.
-              </span>
+              <TextGenerateEffect 
+                words={["Track Every Rupee.", "Keep Every Byte Private."]} 
+                speed={60}
+              />
             </h1>
 
             <p className="hero-anim-item font-sans text-base sm:text-lg text-sandstone-muted max-w-2xl leading-relaxed">
@@ -93,15 +95,17 @@ export default function HeroSection({ onOpenTechnical, onOpenLegal }) {
 
           {/* Action CTAs */}
           <div className="hero-anim-item flex flex-wrap items-center gap-4 pt-2">
-            <a
-              href="https://github.com/nikhil49023/VITT/releases"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 rounded-2xl bg-elemental-water text-canvas font-extrabold text-sm flex items-center gap-3 shadow-xl shadow-elemental-water/20 hover:bg-elemental-sky hover:scale-[1.02] active:scale-95 transition-all"
-            >
-              <Download className="w-5 h-5" />
-              <span>Download VITT v3.0.0 APK</span>
-            </a>
+            <SparklesEffect count={8}>
+              <a
+                href="https://github.com/nikhil49023/VITT/releases"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 rounded-2xl bg-elemental-water text-canvas font-extrabold text-sm flex items-center gap-3 shadow-xl shadow-elemental-water/20 hover:bg-elemental-sky hover:scale-[1.02] active:scale-95 transition-all"
+              >
+                <Download className="w-5 h-5" />
+                <span>Download VITT v3.0.0 APK</span>
+              </a>
+            </SparklesEffect>
 
             <a
               href="#spotlight"
