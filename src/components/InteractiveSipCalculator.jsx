@@ -148,7 +148,7 @@ export default function InteractiveSipCalculator() {
 
             {/* Growth Multiplier Badge */}
             <div className="flex items-center gap-2 pt-2">
-              <span className="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 text-xs font-mono font-semibold flex items-center gap-1">
+              <span className="px-3 py-1 rounded-full bg-elemental-skySoft text-elemental-sky text-xs font-mono font-semibold flex items-center gap-1">
                 <ArrowUpRight className="w-3 h-3" />
                 {growthMultiplier.toFixed(1)}x Growth
               </span>

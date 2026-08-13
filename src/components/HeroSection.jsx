@@ -43,8 +43,8 @@ export default function HeroSection({ onOpenTechnical, onOpenLegal }) {
           
           {/* Top Pill: Rating & Social Proof */}
           <div className="hero-badge-anim inline-flex items-center gap-3 p-1.5 pr-4 rounded-full glass-panel fine-border-water shadow-sm">
-            <div className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-600 font-mono text-[11px] font-bold">
-              <Star className="w-3 h-3 fill-amber-500 text-amber-500" />
+            <div className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-elemental-fireSoft text-elemental-fire font-mono text-[11px] font-bold">
+              <Star className="w-3 h-3 fill-elemental-fire text-elemental-fire" />
               <span>4.9 / 5.0</span>
             </div>
             <span className="text-xs font-mono text-elemental-water">

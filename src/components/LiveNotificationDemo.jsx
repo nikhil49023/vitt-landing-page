@@ -155,7 +155,7 @@ export default function LiveNotificationDemo() {
                 >
                   <div className="space-y-4">
                     {/* Status Badge */}
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 border border-emerald-500/30 text-xs font-mono">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-elemental-skySoft text-elemental-sky border border-elemental-sky/30 text-xs font-mono">
                       <CheckCircle2 className="w-3.5 h-3.5" />
                       <span>Transaction Parsed & Categorized</span>
                     </div>
@@ -185,14 +185,14 @@ export default function LiveNotificationDemo() {
                       </div>
                       <div className="flex items-center justify-between">
                         <span className="text-xs text-sandstone-muted">Status</span>
-                        <span className="text-xs font-bold text-emerald-600">✓ Saved Locally</span>
+                        <span className="text-xs font-bold text-elemental-sky">✓ Saved Locally</span>
                       </div>
                     </div>
 
                     {/* Privacy Badge */}
                     <div className="pt-3 border-t border-elemental-water/10">
                       <div className="flex items-center gap-2 text-[10px] text-sandstone-muted font-mono">
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-elemental-sky" />
                         <span>Zero cloud upload • AES-256 encrypted • 100% on-device</span>
                       </div>
                     </div>

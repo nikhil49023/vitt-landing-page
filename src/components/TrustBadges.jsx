@@ -7,52 +7,52 @@ const trustBadges = [
     icon: ShieldCheck,
     label: "DPDP Act 2023",
     description: "Full Compliance",
-    color: "emerald"
+    color: "sky"
   },
   {
     icon: Lock,
     label: "AES-256",
     description: "Military-Grade Encryption",
-    color: "blue"
+    color: "water"
   },
   {
     icon: EyeOff,
     label: "Zero SMS",
     description: "No Inbox Reading",
-    color: "purple"
+    color: "earth"
   },
   {
     icon: Fingerprint,
     label: "Biometric",
     description: "Hardware Security",
-    color: "amber"
+    color: "fire"
   }
 ];
 
 const colorClasses = {
-  emerald: {
-    bg: 'bg-emerald-500/10',
-    border: 'border-emerald-500/30',
-    text: 'text-emerald-600',
-    icon: 'text-emerald-500'
+  sky: {
+    bg: 'bg-elemental-skySoft',
+    border: 'border-elemental-sky/30',
+    text: 'text-elemental-sky',
+    icon: 'text-elemental-sky'
   },
-  blue: {
-    bg: 'bg-blue-500/10',
-    border: 'border-blue-500/30',
-    text: 'text-blue-600',
-    icon: 'text-blue-500'
+  water: {
+    bg: 'bg-elemental-water/10',
+    border: 'border-elemental-water/30',
+    text: 'text-elemental-water',
+    icon: 'text-elemental-water'
   },
-  purple: {
-    bg: 'bg-purple-500/10',
-    border: 'border-purple-500/30',
-    text: 'text-purple-600',
-    icon: 'text-purple-500'
+  earth: {
+    bg: 'bg-elemental-earth/10',
+    border: 'border-elemental-earth/30',
+    text: 'text-elemental-earth',
+    icon: 'text-elemental-earth'
   },
-  amber: {
-    bg: 'bg-amber-500/10',
-    border: 'border-amber-500/30',
-    text: 'text-amber-600',
-    icon: 'text-amber-500'
+  fire: {
+    bg: 'bg-elemental-fireSoft',
+    border: 'border-elemental-fire/30',
+    text: 'text-elemental-fire',
+    icon: 'text-elemental-fire'
   }
 };
 

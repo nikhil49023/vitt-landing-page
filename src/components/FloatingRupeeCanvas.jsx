@@ -57,7 +57,7 @@ export default function FloatingRupeeCanvas() {
     <div ref={containerRef} className="absolute inset-0 pointer-events-none overflow-hidden z-0">
       {/* Parallax Layer 1: Terracotta Earth & Sky Blue 3D Rupee Coins */}
       <div className="parallax-layer-1 absolute inset-0">
-        <div className="float-coin-1 absolute top-24 left-[5%] md:left-[8%] w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-tr from-elemental-fire via-amber-500 to-amber-200 p-[2px] shadow-xl opacity-90 backdrop-blur-sm">
+        <div className="float-coin-1 absolute top-24 left-[5%] md:left-[8%] w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-tr from-elemental-fire via-elemental-earth to-elemental-wind p-[2px] shadow-xl opacity-90 backdrop-blur-sm">
           <div className="w-full h-full rounded-full bg-canvas/90 flex items-center justify-center border border-elemental-fire/30">
             <span className="font-mono text-2xl md:text-3xl font-extrabold text-elemental-fire drop-shadow-sm">₹</span>
           </div>
