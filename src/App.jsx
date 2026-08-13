@@ -14,6 +14,7 @@ import PhoneShowcasePinned from './components/PhoneShowcasePinned';
 import ComparisonTable from './components/ComparisonTable';
 import LiveStatsTicker from './components/LiveStatsTicker';
 import FeatureBentoGrid from './components/FeatureBentoGrid';
+import LiveNotificationDemo from './components/LiveNotificationDemo';
 import TestimonialSection from './components/TestimonialSection';
 import FaqAccordion from './components/FaqAccordion';
 import ArchitectureSection from './components/ArchitectureSection';
@@ -80,6 +81,9 @@ export default function App() {
 
           {/* Vector Illustrated Feature Bento Grid */}
           <FeatureBentoGrid />
+
+          {/* Live Notification Demo */}
+          <LiveNotificationDemo />
 
           {/* Sovereign Use-Cases */}
           <TestimonialSection />

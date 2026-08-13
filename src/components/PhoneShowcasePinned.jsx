@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Bell, Bot, PieChart, Receipt, CheckCircle2, Lock, Sparkles } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -110,12 +111,31 @@ export default function PhoneShowcasePinned() {
           {/* Step Indicators */}
           <div className="flex gap-2 pt-4">
             {STEPS.map((_, idx) => (
-              <div
+              <motion.div
                 key={idx}
-                className={`h-1.5 rounded-full transition-all duration-300 ${
-                  activeStep === idx ? 'w-12 bg-elemental-water' : 'w-4 bg-canvas-raised border border-elemental-water/10'
-                }`}
+                animate={{
+                  width: activeStep === idx ? 48 : 16,
+                  backgroundColor: activeStep === idx ? '#0F292F' : '#F3EFEA'
+                }}
+                transition={{ duration: 0.3, ease: 'easeInOut' }}
+                className="h-1.5 rounded-full border border-elemental-water/10"
               />
+            ))}
+          </div>
+
+          {/* Feature Tags */}
+          <div className="flex flex-wrap gap-2 pt-4">
+            {['Notification Listener', 'On-Device AI', 'Envelope Budgets', 'AES-256'].map((tag, idx) => (
+              <span
+                key={tag}
+                className={`px-2.5 py-1 rounded-full text-[10px] font-mono transition-all duration-300 ${
+                  activeStep === idx 
+                    ? 'bg-elemental-sky text-canvas shadow-sm' 
+                    : 'bg-canvas-raised text-sandstone-muted border border-elemental-water/10'
+                }`}
+              >
+                {tag}
+              </span>
             ))}
           </div>
 

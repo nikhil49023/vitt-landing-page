@@ -5,3 +5,4 @@ export { default as TextGenerateEffect } from './TextGenerateEffect';
 export { default as Sparkles } from './Sparkles';
 export { default as BackgroundBeams } from './BackgroundBeams';
 export { default as WavyBackground } from './WavyBackground';
+export { default as InfiniteMovingCards } from './InfiniteMovingCards';

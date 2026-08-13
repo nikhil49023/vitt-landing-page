@@ -1,6 +1,6 @@
 import React from 'react';
 import { Quote, ShieldCheck, Heart, User, Sparkles } from 'lucide-react';
-import { ScrollReveal, HoverEffect } from './animations';
+import { ScrollReveal, HoverEffect, InfiniteMovingCards } from './animations';
 
 const PRINCIPLES = [
   {
@@ -20,12 +20,45 @@ const PRINCIPLES = [
     role: "General Individual Demographic",
     tag: "Khata Udhar & WhatsApp Reminders",
     author: "User Persona: Working Professional"
+  },
+  {
+    quote: "Finally a finance app that doesn't sell my data. The on-device AI gives me spending insights without any cloud connection. Pure privacy!",
+    role: "Privacy-Conscious User",
+    tag: "On-Device AI & Zero Cloud",
+    author: "User Persona: Tech Professional"
+  },
+  {
+    quote: "The encrypted document vault lets me store all my tax receipts and invoices locally. No more worrying about cloud security breaches.",
+    role: "Small Business Owner",
+    tag: "Encrypted Vault & OCR",
+    author: "User Persona: Freelancer"
   }
 ];
 
+const testimonialItems = PRINCIPLES.map((item, idx) => ({
+  content: (
+    <>
+      <Quote className="w-8 h-8 text-elemental-sky/40" />
+      <p className="text-xs text-elemental-water leading-relaxed font-serif italic">
+        "{item.quote}"
+      </p>
+      <div className="pt-4 border-t border-elemental-water/10 space-y-1">
+        <div className="flex items-center gap-2 text-xs font-bold text-elemental-water">
+          <User className="w-3.5 h-3.5 text-elemental-sky" />
+          <span>{item.author}</span>
+        </div>
+        <p className="text-[11px] text-sandstone-muted font-mono">{item.role}</p>
+        <span className="inline-block mt-2 px-2.5 py-0.5 rounded-full bg-elemental-skySoft text-elemental-sky font-mono text-[10px] font-semibold">
+          {item.tag}
+        </span>
+      </div>
+    </>
+  )
+}));
+
 export default function TestimonialSection() {
   return (
-    <section className="py-20 px-4 md:px-8 max-w-7xl mx-auto relative z-10">
+    <section className="py-20 px-4 md:px-8 max-w-7xl mx-auto relative z-10 overflow-hidden">
       
       {/* Landify Header */}
       <ScrollReveal>
@@ -45,9 +78,18 @@ export default function TestimonialSection() {
         </div>
       </ScrollReveal>
 
-      {/* 3-Column Landify Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {PRINCIPLES.map((item, idx) => (
+      {/* Infinite Moving Cards - Desktop */}
+      <div className="hidden md:block">
+        <InfiniteMovingCards
+          items={testimonialItems}
+          direction="left"
+          speed="normal"
+        />
+      </div>
+
+      {/* Static Grid - Mobile */}
+      <div className="md:hidden grid grid-cols-1 gap-6">
+        {PRINCIPLES.slice(0, 3).map((item, idx) => (
           <ScrollReveal key={idx} delay={idx * 0.15}>
             <HoverEffect scale={1.02} y={-8}>
               <div className="p-8 rounded-3xl bg-canvas glass-panel fine-border-water shadow-md flex flex-col justify-between space-y-6 hover:-translate-y-1 transition-all duration-300">
