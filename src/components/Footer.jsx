@@ -87,7 +87,7 @@ export default function Footer({ onOpenLegal, onOpenTechnical }) {
               <Code2 className="w-3.5 h-3.5 text-earth-ochre" /> Technical Architecture Specs
             </button>
             <a 
-              href="mailto:developer.nikhil49023@gmail.com"
+              href="mailto:vitt.companion@gmail.com"
               className="hover:text-earth-forest transition-colors flex items-center gap-1.5"
             >
               <Mail className="w-3.5 h-3.5 text-earth-forest" /> Grievance Officer Contact

@@ -5,7 +5,7 @@
 > **Package Name:** `com.vitt.app` (Android Namespace: `com.vitt.companion`)  
 > **Target OS:** Android 5.0+ (API Level 21 `minSdk`, Target API Level 35)  
 > **Developer:** Kilani Sai Nikhil (Solo Independent Developer)  
-> **Contact / Grievance Officer:** `developer.nikhil49023@gmail.com`  
+> **Contact / Grievance Officer:** `vitt.companion@gmail.com`  
 > **Repository:** [https://github.com/nikhil49023/VITT](https://github.com/nikhil49023/VITT)  
 > **Production Web Landing:** [https://vitt-landing-page-411013241105.asia-south1.run.app](https://vitt-landing-page-411013241105.asia-south1.run.app)  
 > **Document Date:** August 12, 2026  
@@ -428,7 +428,7 @@ They do not constitute financial advice, investment recommendations, or stock bu
 ### 8.2 DPDP Act 2023 Compliance & Grievance Officer SLA
 - VITT acts as a local Data Fiduciary under India's **Digital Personal Data Protection (DPDP) Act, 2023**.
 - **Designated Grievance Officer:** Kilani Sai Nikhil
-- **Grievance Email:** `developer.nikhil49023@gmail.com`
+- **Grievance Email:** `vitt.companion@gmail.com`
 - **Response SLA:** Complaints are acknowledged within **24 hours** and resolved within **15 days** as mandated by Rule 4 of the IT Rules 2021 and DPDP §13.
 
 ### 8.3 RBI Guidelines & Zero SMS Permission Rule

@@ -153,7 +153,7 @@ export default function LegalModalContent() {
             <div className="space-y-1 text-xs">
               <p><strong>Designated Grievance Officer:</strong> Kilani Sai Nikhil</p>
               <p><strong>Designation:</strong> Solo Creator & Data Protection Lead</p>
-              <p><strong>Contact Email:</strong> <code className="font-mono text-earth-forest font-bold">developer.nikhil49023@gmail.com</code></p>
+              <p><strong>Contact Email:</strong> <code className="font-mono text-earth-forest font-bold">vitt.companion@gmail.com</code></p>
             </div>
           </div>
 
