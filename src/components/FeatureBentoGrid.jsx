@@ -63,7 +63,7 @@ export default function FeatureBentoGrid() {
 
                 {/* UI Mockup Preview */}
                 <FeatureMockupSlot 
-                  imageSrc="/mockups/feature-upi.png"
+                  imageSrc="./mockups/feature-upi.png"
                   fallbackWidget={
                     <div className="space-y-2 text-left">
                       <div className="p-2.5 rounded-xl bg-canvas-raised border border-earth-forest/10 shadow-xs flex items-center justify-between">
@@ -112,7 +112,7 @@ export default function FeatureBentoGrid() {
 
                 {/* UI Mockup Preview */}
                 <FeatureMockupSlot 
-                  imageSrc="/mockups/feature-ai.png"
+                  imageSrc="./mockups/feature-ai.png"
                   fallbackWidget={
                     <div className="space-y-2 text-left">
                       <div className="p-2 rounded-xl bg-earth-forestSoft text-[11px] text-earth-forest font-medium ml-4 text-right">
@@ -153,7 +153,7 @@ export default function FeatureBentoGrid() {
 
                 {/* UI Mockup Preview */}
                 <FeatureMockupSlot 
-                  imageSrc="/mockups/feature-vault.png"
+                  imageSrc="./mockups/feature-vault.png"
                   fallbackWidget={
                     <div className="p-3 rounded-xl bg-canvas-raised border border-earth-forest/10 shadow-xs flex items-center justify-between text-left">
                       <div className="space-y-1">
@@ -195,7 +195,7 @@ export default function FeatureBentoGrid() {
 
                 {/* UI Mockup Preview */}
                 <FeatureMockupSlot 
-                  imageSrc="/mockups/feature-budgets.png"
+                  imageSrc="./mockups/feature-budgets.png"
                   fallbackWidget={
                     <div className="space-y-2 text-left">
                       <div className="flex items-center justify-between text-xs font-bold text-earth-forest">
@@ -241,7 +241,7 @@ export default function FeatureBentoGrid() {
 
                 {/* UI Mockup Preview */}
                 <FeatureMockupSlot 
-                  imageSrc="/mockups/feature-goals.png"
+                  imageSrc="./mockups/feature-goals.png"
                   fallbackWidget={
                     <div className="space-y-2 text-left">
                       <div className="flex items-center justify-between text-xs font-bold text-earth-forest">
@@ -287,7 +287,7 @@ export default function FeatureBentoGrid() {
 
                 {/* UI Mockup Preview */}
                 <FeatureMockupSlot 
-                  imageSrc="/mockups/feature-sip.png"
+                  imageSrc="./mockups/feature-sip.png"
                   fallbackWidget={
                     <div className="p-3 rounded-xl bg-canvas-raised border border-earth-forest/10 shadow-xs flex items-center justify-between text-left">
                       <div>
@@ -327,7 +327,7 @@ export default function FeatureBentoGrid() {
 
                 {/* UI Mockup Preview */}
                 <FeatureMockupSlot 
-                  imageSrc="/mockups/feature-cashflow.png"
+                  imageSrc="./mockups/feature-cashflow.png"
                   fallbackWidget={
                     <div className="p-3 rounded-xl bg-canvas-raised border border-earth-forest/10 shadow-xs flex items-center justify-between text-left">
                       <div className="space-y-0.5">
@@ -369,7 +369,7 @@ export default function FeatureBentoGrid() {
 
                 {/* UI Mockup Preview */}
                 <FeatureMockupSlot 
-                  imageSrc="/mockups/feature-split.png"
+                  imageSrc="./mockups/feature-split.png"
                   fallbackWidget={
                     <div className="p-3 rounded-xl bg-canvas-raised border border-earth-forest/10 shadow-xs flex items-center justify-between text-left">
                       <div>
@@ -409,7 +409,7 @@ export default function FeatureBentoGrid() {
 
                 {/* UI Mockup Preview */}
                 <FeatureMockupSlot 
-                  imageSrc="/mockups/feature-security.png"
+                  imageSrc="./mockups/feature-security.png"
                   fallbackWidget={
                     <div className="p-3 rounded-xl bg-canvas-raised border border-earth-forest/10 shadow-xs flex items-center justify-between text-left">
                       <div className="flex items-center gap-2">

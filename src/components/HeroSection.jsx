@@ -134,7 +134,7 @@ export default function HeroSection({ onOpenTechnical, onOpenLegal }) {
 
         {/* Right Column: Clean Realistic Phone Mockup Frame */}
         <div className="lg:col-span-5 relative flex items-center justify-center pt-6 lg:pt-0">
-          <PhoneMockupFrame imageSrc="/mockups/hero-phone.png" />
+          <PhoneMockupFrame imageSrc="./mockups/hero-phone.png" />
         </div>
 
       </div>
