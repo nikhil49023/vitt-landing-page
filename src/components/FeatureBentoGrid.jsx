@@ -6,17 +6,24 @@ import {
 } from 'lucide-react';
 import { ScrollReveal, HoverEffect } from './animations';
 
+const BASE = import.meta.env.BASE_URL || '/';
+
 // Clean Editorial Mockup Container for Feature Cards
 function FeatureMockupSlot({ imageSrc, fallbackWidget, alt = 'Feature UI Mockup' }) {
   if (imageSrc) {
     return (
-      <div className="w-full h-40 my-3 rounded-2xl overflow-hidden border border-elemental-water/10 bg-canvas-raised shadow-xs group-hover:border-elemental-sky/30 transition-all">
-        <img src={imageSrc} alt={alt} className="w-full h-full object-cover object-top" loading="lazy" />
+      <div className="w-full h-36 my-3 rounded-2xl overflow-hidden border border-earth-forest/10 bg-canvas-card shadow-xs group-hover:border-earth-sage/30 transition-all flex items-center justify-center">
+        <img 
+          src={imageSrc} 
+          alt={alt} 
+          className="w-full h-full object-cover object-top" 
+          loading="lazy" 
+        />
       </div>
     );
   }
   return (
-    <div className="w-full h-40 my-3 rounded-2xl p-3 bg-canvas-raised/80 border border-elemental-water/10 flex flex-col justify-center relative overflow-hidden group-hover:border-elemental-sky/30 transition-all shadow-2xs select-none">
+    <div className="w-full h-36 my-3 rounded-2xl p-3 bg-canvas-raised/80 border border-earth-forest/10 flex flex-col justify-center relative overflow-hidden group-hover:border-earth-sage/30 transition-all shadow-2xs select-none">
       {fallbackWidget}
     </div>
   );
@@ -63,7 +70,7 @@ export default function FeatureBentoGrid() {
 
                 {/* UI Mockup Preview */}
                 <FeatureMockupSlot 
-                  imageSrc="./mockups/feature-upi.png"
+                  imageSrc={`${BASE}mockups/feature-upi.png`}
                   fallbackWidget={
                     <div className="space-y-2 text-left">
                       <div className="p-2.5 rounded-xl bg-canvas-raised border border-earth-forest/10 shadow-xs flex items-center justify-between">
@@ -112,7 +119,7 @@ export default function FeatureBentoGrid() {
 
                 {/* UI Mockup Preview */}
                 <FeatureMockupSlot 
-                  imageSrc="./mockups/feature-ai.png"
+                  imageSrc={`${BASE}mockups/feature-ai.png`}
                   fallbackWidget={
                     <div className="space-y-2 text-left">
                       <div className="p-2 rounded-xl bg-earth-forestSoft text-[11px] text-earth-forest font-medium ml-4 text-right">
@@ -153,7 +160,7 @@ export default function FeatureBentoGrid() {
 
                 {/* UI Mockup Preview */}
                 <FeatureMockupSlot 
-                  imageSrc="./mockups/feature-vault.png"
+                  imageSrc={`${BASE}mockups/feature-vault.png`}
                   fallbackWidget={
                     <div className="p-3 rounded-xl bg-canvas-raised border border-earth-forest/10 shadow-xs flex items-center justify-between text-left">
                       <div className="space-y-1">
@@ -195,7 +202,7 @@ export default function FeatureBentoGrid() {
 
                 {/* UI Mockup Preview */}
                 <FeatureMockupSlot 
-                  imageSrc="./mockups/feature-budgets.png"
+                  imageSrc={`${BASE}mockups/feature-budgets.png`}
                   fallbackWidget={
                     <div className="space-y-2 text-left">
                       <div className="flex items-center justify-between text-xs font-bold text-earth-forest">
@@ -241,7 +248,7 @@ export default function FeatureBentoGrid() {
 
                 {/* UI Mockup Preview */}
                 <FeatureMockupSlot 
-                  imageSrc="./mockups/feature-goals.png"
+                  imageSrc={`${BASE}mockups/feature-goals.png`}
                   fallbackWidget={
                     <div className="space-y-2 text-left">
                       <div className="flex items-center justify-between text-xs font-bold text-earth-forest">
@@ -287,7 +294,7 @@ export default function FeatureBentoGrid() {
 
                 {/* UI Mockup Preview */}
                 <FeatureMockupSlot 
-                  imageSrc="./mockups/feature-sip.png"
+                  imageSrc={`${BASE}mockups/feature-sip.png`}
                   fallbackWidget={
                     <div className="p-3 rounded-xl bg-canvas-raised border border-earth-forest/10 shadow-xs flex items-center justify-between text-left">
                       <div>
@@ -327,7 +334,7 @@ export default function FeatureBentoGrid() {
 
                 {/* UI Mockup Preview */}
                 <FeatureMockupSlot 
-                  imageSrc="./mockups/feature-cashflow.png"
+                  imageSrc={`${BASE}mockups/feature-cashflow.png`}
                   fallbackWidget={
                     <div className="p-3 rounded-xl bg-canvas-raised border border-earth-forest/10 shadow-xs flex items-center justify-between text-left">
                       <div className="space-y-0.5">
@@ -369,7 +376,7 @@ export default function FeatureBentoGrid() {
 
                 {/* UI Mockup Preview */}
                 <FeatureMockupSlot 
-                  imageSrc="./mockups/feature-split.png"
+                  imageSrc={`${BASE}mockups/feature-split.png`}
                   fallbackWidget={
                     <div className="p-3 rounded-xl bg-canvas-raised border border-earth-forest/10 shadow-xs flex items-center justify-between text-left">
                       <div>
@@ -409,7 +416,7 @@ export default function FeatureBentoGrid() {
 
                 {/* UI Mockup Preview */}
                 <FeatureMockupSlot 
-                  imageSrc="./mockups/feature-security.png"
+                  imageSrc={`${BASE}mockups/feature-security.png`}
                   fallbackWidget={
                     <div className="p-3 rounded-xl bg-canvas-raised border border-earth-forest/10 shadow-xs flex items-center justify-between text-left">
                       <div className="flex items-center gap-2">
