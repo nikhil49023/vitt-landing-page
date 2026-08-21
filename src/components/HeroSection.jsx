@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import { Download, ArrowRight, Lock, EyeOff, Cpu, Star, CheckCircle2 } from 'lucide-react';
+import { Download, ArrowRight, Lock, EyeOff, Cpu, CheckCircle2 } from 'lucide-react';
 import PhoneMockupFrame from './PhoneMockupFrame';
 import InteractiveCanvasBackground from './InteractiveCanvasBackground';
 import { TextGenerateEffect, Sparkles as SparklesEffect } from './animations';
@@ -43,14 +43,11 @@ export default function HeroSection({ onOpenTechnical, onOpenLegal }) {
         {/* Left Column: High-Impact Promotional Value Stack */}
         <div className="lg:col-span-7 space-y-7 text-left">
           
-          {/* Top Pill: Rating & Social Proof */}
-          <div className="hero-badge-anim inline-flex items-center gap-3 p-1.5 pr-4 rounded-full bg-canvas-raised border border-earth-forest/15 shadow-sm">
-            <div className="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-earth-terracottaSoft text-earth-terracotta font-mono text-[11px] font-bold">
-              <Star className="w-3 h-3 fill-earth-terracotta text-earth-terracotta" />
-              <span>4.9 / 5.0</span>
-            </div>
-            <span className="text-xs font-mono text-earth-forest font-medium">
-              🏆 India's #1 Sovereign Finance Companion • 100% On-Device
+          {/* Top Pill: Production Build Status & Sovereignty Guarantee */}
+          <div className="hero-badge-anim inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-canvas-raised border border-earth-forest/15 shadow-sm">
+            <span className="w-2 h-2 rounded-full bg-earth-sage animate-pulse" />
+            <span className="text-xs font-mono text-earth-forest font-semibold">
+              Universal Android Build · 100% Free & Open-Source Utility
             </span>
           </div>
 

@@ -5,7 +5,7 @@ import { ScrollReveal, HoverEffect } from './animations';
 const trustBadges = [
   {
     icon: ShieldCheck,
-    label: "#1 in Privacy",
+    label: "Sovereign Architecture",
     description: "Zero Cloud Uploads",
     color: "sage"
   },

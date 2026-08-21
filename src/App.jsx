@@ -9,7 +9,6 @@ import LogoCloud from './components/LogoCloud';
 import HowItWorks from './components/HowItWorks';
 import FeatureBentoGrid from './components/FeatureBentoGrid';
 import LiveNotificationDemo from './components/LiveNotificationDemo';
-import TestimonialSection from './components/TestimonialSection';
 import FaqAccordion from './components/FaqAccordion';
 import CtaBanner from './components/CtaBanner';
 import Footer from './components/Footer';
@@ -21,12 +20,11 @@ import TechnicalModalContent from './components/TechnicalModalContent';
 const AiPlayground = lazy(() => import('./components/AiPlayground'));
 const InteractiveSipCalculator = lazy(() => import('./components/InteractiveSipCalculator'));
 const ComparisonTable = lazy(() => import('./components/ComparisonTable'));
-const LiveStatsTicker = lazy(() => import('./components/LiveStatsTicker'));
 
 // Loading fallback component
 const LoadingFallback = () => (
   <div className="flex items-center justify-center py-16">
-    <div className="w-7 h-7 border-2 border-elemental-sky/30 border-t-elemental-sky rounded-full animate-spin" />
+    <div className="w-7 h-7 border-2 border-earth-forest/30 border-t-earth-forest rounded-full animate-spin" />
   </div>
 );
 
@@ -36,7 +34,7 @@ export default function App() {
 
   return (
     <SmoothScroll>
-      <div className="min-h-screen bg-canvas text-elemental-water selection:bg-elemental-sky/20 selection:text-elemental-water relative overflow-x-hidden">
+      <div className="min-h-screen bg-canvas text-elemental-water selection:bg-earth-forest/10 selection:text-earth-forest relative overflow-x-hidden">
         
         {/* Skip to main content - Accessibility */}
         <a href="#main-content" className="skip-link">
@@ -89,18 +87,12 @@ export default function App() {
 
             {/* VITT vs Traditional Apps Comparison */}
             <ComparisonTable />
-
-            {/* Live Statistics & Performance Metrics */}
-            <LiveStatsTicker />
           </Suspense>
 
-          {/* 8. User Stories & Use-Cases */}
-          <TestimonialSection />
-
-          {/* 9. Frequently Asked Questions */}
+          {/* 8. Frequently Asked Questions */}
           <FaqAccordion />
 
-          {/* 10. High-Conversion Bottom CTA Banner */}
+          {/* 9. Sovereign Bottom CTA Banner */}
           <CtaBanner 
             onOpenTechnical={() => setTechnicalOpen(true)}
           />
