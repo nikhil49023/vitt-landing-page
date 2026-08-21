@@ -9,17 +9,17 @@ export default function HowItWorks() {
       icon: Smartphone,
       title: 'Pay via UPI as Usual',
       description: 'Scan any QR code or send money on GPay, PhonePe, Paytm, or CRED. VITT detects your payments automatically the instant you spend.',
-      accent: 'border-elemental-sky/40 text-elemental-sky',
+      accent: 'border-earth-sage/30 bg-earth-sageSoft text-earth-sage',
       preview: (
-        <div className="p-3.5 rounded-2xl bg-canvas-card border border-elemental-water/10 shadow-xs space-y-2 text-left">
-          <div className="flex items-center justify-between text-xs font-bold text-elemental-water">
+        <div className="p-3.5 rounded-2xl bg-canvas-raised border border-earth-forest/10 shadow-xs space-y-2 text-left">
+          <div className="flex items-center justify-between text-xs font-bold text-earth-forest">
             <span className="flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" /> GPay Payment
+              <span className="w-2 h-2 rounded-full bg-earth-sage animate-ping" /> GPay Payment
             </span>
             <span className="font-mono text-sandstone-muted text-[10px]">Just now</span>
           </div>
-          <p className="text-xs text-elemental-water font-semibold">₹150 sent to Chai Point</p>
-          <div className="text-[10px] font-mono text-emerald-600 font-bold flex items-center justify-between border-t border-elemental-water/5 pt-1.5">
+          <p className="text-xs text-earth-forest font-semibold">₹150 sent to Chai Point</p>
+          <div className="text-[10px] font-mono text-earth-sage font-bold flex items-center justify-between border-t border-earth-forest/5 pt-1.5">
             <span>✓ Auto-logged</span>
             <span>0 SMS read</span>
           </div>
@@ -31,19 +31,19 @@ export default function HowItWorks() {
       icon: Zap,
       title: 'Expenses Sort Into Budgets Instantly',
       description: 'Every rupee is automatically organized into your grocery, dining, bills, or shopping budgets with gentle warnings before you overspend.',
-      accent: 'border-elemental-fire/40 text-elemental-fire',
+      accent: 'border-earth-terracotta/30 bg-earth-terracottaSoft text-earth-terracotta',
       preview: (
-        <div className="p-3.5 rounded-2xl bg-canvas-card border border-elemental-water/10 shadow-xs space-y-2 text-left">
-          <div className="flex items-center justify-between text-xs font-bold text-elemental-water">
+        <div className="p-3.5 rounded-2xl bg-canvas-raised border border-earth-forest/10 shadow-xs space-y-2 text-left">
+          <div className="flex items-center justify-between text-xs font-bold text-earth-forest">
             <span>Monthly Food & Dining</span>
-            <span className="font-mono text-[11px] text-elemental-sky font-bold">64% used</span>
+            <span className="font-mono text-[11px] text-earth-forest font-bold">64% used</span>
           </div>
-          <div className="w-full h-2 rounded-full bg-canvas-raised overflow-hidden">
-            <div className="h-full bg-elemental-sky rounded-full" style={{ width: '64%' }} />
+          <div className="w-full h-2 rounded-full bg-canvas-subtle overflow-hidden">
+            <div className="h-full bg-earth-sage rounded-full" style={{ width: '64%' }} />
           </div>
           <div className="text-[10px] font-mono text-sandstone-muted flex justify-between">
             <span>Safe Spending Pace</span>
-            <span className="text-elemental-water font-bold">₹3,550 left</span>
+            <span className="text-earth-forest font-bold">₹3,550 left</span>
           </div>
         </div>
       )
@@ -53,13 +53,13 @@ export default function HowItWorks() {
       icon: Sparkles,
       title: 'Get Honest Advice from Your AI Coach',
       description: 'Ask questions like "How much did I spend on Swiggy this month?" or "Can I afford this trip?" and get instant answers 100% offline.',
-      accent: 'border-elemental-water/40 text-elemental-water',
+      accent: 'border-earth-ochre/30 bg-earth-ochreSoft text-earth-ochre',
       preview: (
-        <div className="p-3.5 rounded-2xl bg-canvas-card border border-elemental-water/10 shadow-xs space-y-1.5 text-left">
-          <div className="text-[11px] font-semibold text-elemental-sky font-mono flex items-center gap-1">
-            <Bot className="w-3.5 h-3.5" /> Offline AI Advisor
+        <div className="p-3.5 rounded-2xl bg-canvas-raised border border-earth-forest/10 shadow-xs space-y-1.5 text-left">
+          <div className="text-[11px] font-semibold text-earth-forest font-mono flex items-center gap-1">
+            <Bot className="w-3.5 h-3.5 text-earth-ochre" /> Offline AI Advisor
           </div>
-          <p className="text-xs text-elemental-water font-medium">
+          <p className="text-xs text-earth-forest font-medium">
             "You saved ₹12,400 more than last month. Ready to invest ₹5,000 in your SIP!"
           </p>
         </div>
@@ -73,11 +73,11 @@ export default function HowItWorks() {
       {/* Section Header */}
       <ScrollReveal>
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <span className="px-3.5 py-1 rounded-full bg-elemental-skySoft text-elemental-sky font-mono text-xs font-semibold">
+          <span className="px-3.5 py-1 rounded-full bg-earth-sageSoft text-earth-forest border border-earth-sage/30 font-mono text-xs font-semibold">
             Simple & Effortless Setup
           </span>
 
-          <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl font-extrabold text-elemental-water tracking-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-earth-forest tracking-tight">
             How VITT Works in 3 Simple Steps
           </h2>
 
@@ -94,13 +94,13 @@ export default function HowItWorks() {
           return (
             <ScrollReveal key={idx} delay={idx * 0.12}>
               <HoverEffect scale={1.02} y={-6}>
-                <div className="p-6 sm:p-8 rounded-3xl bg-canvas glass-panel fine-border-water shadow-sm flex flex-col justify-between space-y-6 hover:-translate-y-1.5 transition-all duration-300 relative group h-full">
+                <div className="p-6 sm:p-8 rounded-3xl bg-canvas-card border border-earth-forest/15 shadow-xs flex flex-col justify-between space-y-6 hover:-translate-y-1.5 transition-all duration-300 relative group h-full">
                   <div className="space-y-4">
                     <div className="flex items-center justify-between">
-                      <div className={`w-12 h-12 rounded-2xl bg-canvas-raised border flex items-center justify-center ${item.accent}`}>
+                      <div className={`w-12 h-12 rounded-2xl border flex items-center justify-center ${item.accent}`}>
                         <StepIcon className="w-6 h-6" />
                       </div>
-                      <span className="font-mono text-3xl font-extrabold text-sandstone-faint/40">
+                      <span className="font-mono text-3xl font-extrabold text-earth-forest/20">
                         {item.step}
                       </span>
                     </div>
@@ -110,7 +110,7 @@ export default function HowItWorks() {
                       {item.preview}
                     </div>
 
-                    <h3 className="text-lg font-bold text-elemental-water">
+                    <h3 className="text-lg font-bold font-serif text-earth-forest">
                       {item.title}
                     </h3>
 
@@ -120,7 +120,7 @@ export default function HowItWorks() {
                   </div>
 
                   {idx < 2 && (
-                    <div className="hidden lg:block absolute -right-4 top-1/2 -translate-y-1/2 z-20 text-elemental-water/20">
+                    <div className="hidden lg:block absolute -right-4 top-1/2 -translate-y-1/2 z-20 text-earth-forest/30">
                       <ArrowRight className="w-6 h-6" />
                     </div>
                   )}

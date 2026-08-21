@@ -7,52 +7,52 @@ const trustBadges = [
     icon: ShieldCheck,
     label: "#1 in Privacy",
     description: "Zero Cloud Uploads",
-    color: "sky"
+    color: "sage"
   },
   {
     icon: Lock,
     label: "Bank-Grade Vault",
-    description: "Hardware-Locked Storage",
-    color: "water"
+    description: "SQLCipher AES-256",
+    color: "forest"
   },
   {
     icon: EyeOff,
     label: "Zero SMS Reading",
     description: "100% Private UPI Tracking",
-    color: "earth"
+    color: "terracotta"
   },
   {
     icon: Fingerprint,
     label: "100% Free Forever",
     description: "Zero Ads • Zero Spam Calls",
-    color: "fire"
+    color: "ochre"
   }
 ];
 
 const colorClasses = {
-  sky: {
-    bg: 'bg-elemental-skySoft',
-    border: 'border-elemental-sky/30',
-    text: 'text-elemental-sky',
-    icon: 'text-elemental-sky'
+  sage: {
+    bg: 'bg-earth-sageSoft',
+    border: 'border-earth-sage/30',
+    text: 'text-earth-forest',
+    icon: 'text-earth-sage'
   },
-  water: {
-    bg: 'bg-elemental-water/10',
-    border: 'border-elemental-water/30',
-    text: 'text-elemental-water',
-    icon: 'text-elemental-water'
+  forest: {
+    bg: 'bg-earth-forestSoft',
+    border: 'border-earth-forest/25',
+    text: 'text-earth-forest',
+    icon: 'text-earth-forest'
   },
-  earth: {
-    bg: 'bg-elemental-earth/10',
-    border: 'border-elemental-earth/30',
-    text: 'text-elemental-earth',
-    icon: 'text-elemental-earth'
+  terracotta: {
+    bg: 'bg-earth-terracottaSoft',
+    border: 'border-earth-terracotta/30',
+    text: 'text-earth-forest',
+    icon: 'text-earth-terracotta'
   },
-  fire: {
-    bg: 'bg-elemental-fireSoft',
-    border: 'border-elemental-fire/30',
-    text: 'text-elemental-fire',
-    icon: 'text-elemental-fire'
+  ochre: {
+    bg: 'bg-earth-ochreSoft',
+    border: 'border-earth-ochre/30',
+    text: 'text-earth-forest',
+    icon: 'text-earth-ochre'
   }
 };
 

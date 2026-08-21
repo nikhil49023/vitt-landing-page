@@ -36,16 +36,16 @@ export default function FaqAccordion() {
       
       {/* Header */}
       <div className="text-center space-y-4 mb-14">
-        <span className="px-3.5 py-1 rounded-full bg-canvas-raised text-elemental-water font-mono text-xs font-semibold">
+        <span className="px-3.5 py-1 rounded-full bg-earth-sageSoft text-earth-forest border border-earth-sage/30 font-mono text-xs font-semibold">
           Got Questions?
         </span>
 
-        <h2 className="font-sans text-3xl sm:text-4xl font-extrabold text-elemental-water tracking-tight">
+        <h2 className="font-serif text-3xl sm:text-4xl font-bold text-earth-forest tracking-tight">
           Frequently Asked Questions
         </h2>
 
         <p className="text-sm text-sandstone-muted font-sans max-w-lg mx-auto leading-relaxed">
-          Everything you need to know about why VITT is the best personal financial management application.
+          Everything you need to know about why VITT is the sovereign personal financial management application.
         </p>
       </div>
 
@@ -56,23 +56,25 @@ export default function FaqAccordion() {
           return (
             <div
               key={idx}
-              className="rounded-2xl glass-panel fine-border-water overflow-hidden transition-all duration-200 bg-canvas shadow-xs"
+              className="rounded-2xl border border-earth-forest/15 overflow-hidden transition-all duration-200 bg-canvas-card shadow-xs"
             >
               <button
                 onClick={() => toggle(idx)}
-                className="w-full p-5 text-left flex items-center justify-between font-bold text-sm text-elemental-water hover:text-elemental-sky transition-colors"
+                className="w-full p-5 text-left flex items-center justify-between font-serif font-bold text-sm text-earth-forest hover:text-earth-sage transition-colors"
               >
                 <span className="flex items-center gap-3">
-                  <HelpCircle className="w-4 h-4 text-elemental-sky shrink-0" />
+                  <div className="w-6 h-6 rounded-lg bg-earth-sageSoft flex items-center justify-center text-earth-sage shrink-0">
+                    <HelpCircle className="w-3.5 h-3.5" />
+                  </div>
                   <span>{faq.q}</span>
                 </span>
                 <ChevronDown className={`w-4 h-4 text-sandstone-muted transition-transform duration-300 shrink-0 ${
-                  isOpen ? 'rotate-180 text-elemental-sky' : ''
+                  isOpen ? 'rotate-180 text-earth-sage' : ''
                 }`} />
               </button>
 
               {isOpen && (
-                <div className="px-5 pb-5 pt-1 text-xs text-sandstone-muted leading-relaxed font-sans border-t border-elemental-water/5 animate-fadeIn">
+                <div className="px-5 pb-5 pt-1 text-xs text-sandstone-muted leading-relaxed font-sans border-t border-earth-forest/5 animate-fadeIn">
                   {faq.a}
                 </div>
               )}

@@ -8,31 +8,47 @@ export default {
     extend: {
       colors: {
         canvas: {
-          DEFAULT: '#FAF8F5', // Warm Sandstone Ivory Paper
-          raised: '#F3EFEA',  // Soft Sandstone Card Surface
+          DEFAULT: '#FAF7F2', // Warm Sandstone Alabaster
+          raised: '#F4ECE1',  // Soft Parchment Surface
           card: '#FFFFFF',    // Clean Pure Card
-          hover: '#EBF1ED',   // Subtle Elemental Hover
+          subtle: '#EDE4D6',  // Subtle Warm Border
+          hover: '#EAE1D2',   // Warm Hover
+          dark: '#13281E',    // Deep Sovereign Forest
+          darkSurface: '#0E1F17',
+        },
+        earth: {
+          forest: '#183A2B',   // Sovereign Deep Forest Green
+          forestSoft: 'rgba(24, 58, 43, 0.08)',
+          terracotta: '#9E4D34', // Warm Terracotta Clay
+          terracottaSoft: 'rgba(158, 77, 52, 0.10)',
+          sage: '#4A7A58',     // Vedic Sage Green
+          sageSoft: 'rgba(74, 122, 88, 0.12)',
+          ochre: '#B68637',    // Heritage Ochre Amber / Gold
+          ochreSoft: 'rgba(182, 134, 55, 0.12)',
+          clay: '#6B5B52',     // Muted Clay
+          bark: '#423730',     // Deep Bark
+          charcoal: '#1A2420', // Ultra-dark Charcoal Forest
         },
         elemental: {
-          earth: '#8C6D53',   // Warm Muted Clay / Earth
-          water: '#0F292F',   // Deep Oceanic Teal / Primary Structure
-          waterSoft: '#133840',
-          fire: '#C2410C',    // Terracotta Fire / Alert
-          fireSoft: 'rgba(194, 65, 12, 0.08)',
-          wind: '#D4E2D7',    // Muted Sage Wind / Subtle Pills
-          windSoft: 'rgba(212, 226, 215, 0.4)',
-          sky: '#0284C7',     // Celestial Sky Blue / Accent
-          skySoft: 'rgba(2, 132, 199, 0.08)',
+          earth: '#9E4D34',
+          water: '#183A2B',   // Mapped to Deep Forest
+          waterSoft: '#1F4736',
+          fire: '#9E4D34',    // Terracotta
+          fireSoft: 'rgba(158, 77, 52, 0.10)',
+          wind: '#E2ECE5',    // Sage Wash
+          windSoft: 'rgba(74, 122, 88, 0.10)',
+          sky: '#3F7057',     // Sovereign Forest Accent
+          skySoft: 'rgba(74, 122, 88, 0.10)',
         },
         sandstone: {
-          dark: '#0F292F',
-          muted: '#526E75',
-          faint: '#889F9E',
+          dark: '#183A2B',
+          muted: '#4A5B53',
+          faint: '#7A8C83',
         }
       },
       fontFamily: {
         sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-        serif: ['"Lora"', 'serif'],
+        serif: ['"Lora"', 'Georgia', 'serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
       },
     },

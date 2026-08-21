@@ -44,19 +44,19 @@ export default function HeroSection({ onOpenTechnical, onOpenLegal }) {
         <div className="lg:col-span-7 space-y-7 text-left">
           
           {/* Top Pill: Rating & Social Proof */}
-          <div className="hero-badge-anim inline-flex items-center gap-3 p-1.5 pr-4 rounded-full glass-panel fine-border-water shadow-sm">
-            <div className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-elemental-fireSoft text-elemental-fire font-mono text-[11px] font-bold">
-              <Star className="w-3 h-3 fill-elemental-fire text-elemental-fire" />
+          <div className="hero-badge-anim inline-flex items-center gap-3 p-1.5 pr-4 rounded-full bg-canvas-raised border border-earth-forest/15 shadow-sm">
+            <div className="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-earth-terracottaSoft text-earth-terracotta font-mono text-[11px] font-bold">
+              <Star className="w-3 h-3 fill-earth-terracotta text-earth-terracotta" />
               <span>4.9 / 5.0</span>
             </div>
-            <span className="text-xs font-mono text-elemental-water">
-              🏆 India's #1 Private Money Tracker • 100% Free & Open-Source
+            <span className="text-xs font-mono text-earth-forest font-medium">
+              🏆 India's #1 Sovereign Finance Companion • 100% On-Device
             </span>
           </div>
 
           {/* Main Headline */}
           <div className="space-y-4">
-            <h1 className="hero-anim-item font-sans text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-elemental-water leading-[1.12]">
+            <h1 className="hero-anim-item font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-earth-forest leading-[1.14]">
               <TextGenerateEffect 
                 words={["Track Every Rupee Automatically.", "Zero Manual Typing. Zero Spam. 100% Private."]} 
                 speed={55}
@@ -64,33 +64,39 @@ export default function HeroSection({ onOpenTechnical, onOpenLegal }) {
             </h1>
 
             <p className="hero-anim-item font-sans text-base sm:text-lg text-sandstone-muted max-w-2xl leading-relaxed">
-              Pay for chai, groceries, or bills as usual. VITT automatically detects your UPI payments from GPay, PhonePe, Paytm, and bank alerts. No manual typing, no bank passwords, zero reading of your personal SMS, and your financial data never leaves your phone.
+              Pay for chai, groceries, or bills as usual. VITT automatically detects your UPI payments from GPay, PhonePe, Paytm, and bank alerts. No manual typing, zero reading of your personal SMS, and your financial data never leaves your phone.
             </p>
           </div>
 
           {/* Key Promotional Guarantees Bar - Human Benefits */}
           <div className="hero-anim-item grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1 max-w-xl">
-            <div className="p-3 rounded-2xl bg-canvas-raised border border-elemental-water/10 flex items-center gap-2.5 shadow-xs">
-              <Lock className="w-4 h-4 text-elemental-sky shrink-0" />
+            <div className="p-3.5 rounded-2xl bg-canvas-card border border-earth-forest/10 flex items-center gap-2.5 shadow-xs">
+              <div className="w-8 h-8 rounded-xl bg-earth-sageSoft text-earth-sage flex items-center justify-center shrink-0">
+                <Lock className="w-4 h-4" />
+              </div>
               <div>
-                <p className="text-xs font-bold text-elemental-water">100% Private</p>
+                <p className="text-xs font-bold text-earth-forest">100% Private</p>
                 <p className="text-[10px] text-sandstone-muted font-mono">Data stays on your phone</p>
               </div>
             </div>
 
-            <div className="p-3 rounded-2xl bg-canvas-raised border border-elemental-water/10 flex items-center gap-2.5 shadow-xs">
-              <EyeOff className="w-4 h-4 text-elemental-sky shrink-0" />
+            <div className="p-3.5 rounded-2xl bg-canvas-card border border-earth-forest/10 flex items-center gap-2.5 shadow-xs">
+              <div className="w-8 h-8 rounded-xl bg-earth-terracottaSoft text-earth-terracotta flex items-center justify-center shrink-0">
+                <EyeOff className="w-4 h-4" />
+              </div>
               <div>
-                <p className="text-xs font-bold text-elemental-water">Zero SMS Access</p>
+                <p className="text-xs font-bold text-earth-forest">Zero SMS Access</p>
                 <p className="text-[10px] text-sandstone-muted font-mono">Never reads private texts</p>
               </div>
             </div>
 
-            <div className="p-3 rounded-2xl bg-canvas-raised border border-elemental-water/10 flex items-center gap-2.5 shadow-xs">
-              <Cpu className="w-4 h-4 text-elemental-sky shrink-0" />
+            <div className="p-3.5 rounded-2xl bg-canvas-card border border-earth-forest/10 flex items-center gap-2.5 shadow-xs">
+              <div className="w-8 h-8 rounded-xl bg-earth-ochreSoft text-earth-ochre flex items-center justify-center shrink-0">
+                <Cpu className="w-4 h-4" />
+              </div>
               <div>
-                <p className="text-xs font-bold text-elemental-water">Offline AI Coach</p>
-                <p className="text-[10px] text-sandstone-muted font-mono">Ask anything without internet</p>
+                <p className="text-xs font-bold text-earth-forest">Offline AI Coach</p>
+                <p className="text-[10px] text-sandstone-muted font-mono">100% on-device inference</p>
               </div>
             </div>
           </div>
@@ -102,7 +108,7 @@ export default function HeroSection({ onOpenTechnical, onOpenLegal }) {
                 href="https://github.com/nikhil49023/VITT/releases"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-4 rounded-2xl bg-elemental-water text-canvas font-extrabold text-sm flex items-center gap-3 shadow-xl shadow-elemental-water/20 hover:bg-elemental-sky hover:scale-[1.02] active:scale-95 transition-all"
+                className="px-8 py-4 rounded-2xl bg-earth-forest text-canvas font-extrabold text-sm flex items-center gap-3 shadow-xl shadow-earth-forest/20 hover:bg-earth-sage hover:scale-[1.02] active:scale-95 transition-all"
               >
                 <Download className="w-5 h-5" />
                 <span>Download Free for Android</span>
@@ -111,16 +117,16 @@ export default function HeroSection({ onOpenTechnical, onOpenLegal }) {
 
             <a
               href="#how-it-works"
-              className="px-6 py-4 rounded-2xl glass-panel fine-border text-elemental-water font-semibold text-sm flex items-center gap-2 hover:border-elemental-sky/50 transition-all"
+              className="px-6 py-4 rounded-2xl bg-canvas-raised border border-earth-forest/15 text-earth-forest font-semibold text-sm flex items-center gap-2 hover:bg-canvas-subtle transition-all"
             >
               <span>See How It Works</span>
-              <ArrowRight className="w-4 h-4 text-elemental-sky" />
+              <ArrowRight className="w-4 h-4 text-earth-forest" />
             </a>
           </div>
 
           {/* Open Source & Peace of Mind Pill */}
           <div className="hero-anim-item flex flex-wrap items-center gap-4 text-[11px] text-sandstone-muted font-mono pt-1">
-            <span className="flex items-center gap-1 text-elemental-sky font-semibold">
+            <span className="flex items-center gap-1 text-earth-sage font-bold">
               <CheckCircle2 className="w-3.5 h-3.5" /> 100% Free Forever
             </span>
             <span>• Zero In-App Ads</span>

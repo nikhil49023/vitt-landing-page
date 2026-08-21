@@ -48,41 +48,43 @@ export default function ComparisonTable() {
       {/* Header */}
       <ScrollReveal>
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-14">
-          <span className="px-3.5 py-1 rounded-full bg-elemental-skySoft text-elemental-sky font-mono text-xs font-semibold">
+          <span className="px-3.5 py-1 rounded-full bg-earth-sageSoft text-earth-forest border border-earth-sage/30 font-mono text-xs font-semibold">
             Clear Honest Comparison
           </span>
 
-          <h2 className="font-sans text-3xl sm:text-4xl font-extrabold text-elemental-water tracking-tight">
-            How VITT Compares to Other Apps
+          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-earth-forest tracking-tight">
+            How VITT Compares to Traditional Trackers
           </h2>
 
           <p className="text-sm text-sandstone-muted font-sans max-w-xl mx-auto leading-relaxed">
-            See how VITT protects your peace of mind compared to traditional apps that sell your data or bombard you with loan calls.
+            See how VITT protects your sovereignty compared to cloud-based apps that monetize your financial data or bombard you with loan calls.
           </p>
         </div>
       </ScrollReveal>
 
       {/* Comparison Table Container */}
       <ScrollReveal delay={0.2}>
-        <div className="rounded-3xl glass-panel fine-border-water shadow-xl bg-canvas overflow-hidden max-w-5xl mx-auto">
+        <div className="rounded-3xl border border-earth-forest/15 shadow-xl bg-canvas-card overflow-hidden max-w-5xl mx-auto">
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="bg-canvas-raised border-b border-elemental-water/10 text-xs font-mono">
-                  <th className="p-4 sm:p-5 text-elemental-water">Feature / Guarantee</th>
-                  <th className="p-4 sm:p-5 text-elemental-sky font-extrabold text-sm flex items-center gap-1.5">
-                    <Shield className="w-4 h-4" /> VITT App
+                <tr className="bg-canvas-raised border-b border-earth-forest/10 text-xs font-mono">
+                  <th className="p-4 sm:p-5 text-earth-forest font-bold">Feature / Privacy Standard</th>
+                  <th className="p-4 sm:p-5 text-earth-forest font-bold text-sm bg-earth-sageSoft/40">
+                    <div className="flex items-center gap-1.5 font-serif">
+                      <Shield className="w-4 h-4 text-earth-sage" /> VITT App
+                    </div>
                   </th>
-                  <th className="p-4 sm:p-5 text-sandstone-muted font-semibold">Traditional Apps</th>
+                  <th className="p-4 sm:p-5 text-sandstone-muted font-medium">Traditional Cloud Trackers</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-elemental-water/10 text-xs">
+              <tbody className="divide-y divide-earth-forest/10 text-xs font-sans">
                 {COMPARISONS.map((row, idx) => (
                   <tr key={idx} className="hover:bg-canvas-raised/50 transition-colors">
-                    <td className="p-4 sm:p-5 font-bold text-elemental-water">{row.feature}</td>
-                    <td className="p-4 sm:p-5 text-elemental-water font-semibold bg-elemental-skySoft/30">
+                    <td className="p-4 sm:p-5 font-bold font-serif text-earth-forest">{row.feature}</td>
+                    <td className="p-4 sm:p-5 text-earth-forest font-medium bg-earth-sageSoft/20">
                       <div className="flex items-center gap-2">
-                        <div className="w-5 h-5 rounded-full bg-elemental-sky text-canvas flex items-center justify-center shrink-0">
+                        <div className="w-5 h-5 rounded-full bg-earth-sage text-canvas flex items-center justify-center shrink-0">
                           <Check className="w-3.5 h-3.5 stroke-[3]" />
                         </div>
                         <span>{row.vitt}</span>
@@ -90,7 +92,7 @@ export default function ComparisonTable() {
                     </td>
                     <td className="p-4 sm:p-5 text-sandstone-muted">
                       <div className="flex items-center gap-2">
-                        <div className="w-5 h-5 rounded-full bg-elemental-fire/10 text-elemental-fire flex items-center justify-center shrink-0">
+                        <div className="w-5 h-5 rounded-full bg-earth-terracottaSoft text-earth-terracotta flex items-center justify-center shrink-0">
                           <X className="w-3.5 h-3.5 stroke-[3]" />
                         </div>
                         <span>{row.others}</span>
