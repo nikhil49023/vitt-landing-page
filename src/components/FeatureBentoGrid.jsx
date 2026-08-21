@@ -1,34 +1,45 @@
 import React from 'react';
 import { 
-  Bell, Bot, Receipt, PieChart, Target, Calculator, TrendingUp, 
-  Users, Lock, Landmark, CreditCard, Sparkles, CheckCircle2, Clock 
+  Bell, Bot, Receipt, PieChart, Target, Calculator, 
+  TrendingUp, Users, Lock, Landmark, CreditCard, 
+  Sparkles, CheckCircle2, ArrowUpRight, ShieldCheck, Zap
 } from 'lucide-react';
-import { 
-  IllustrationNotification, IllustrationAI, IllustrationOCR, 
-  IllustrationBudgets, IllustrationGoals, IllustrationInvestment, 
-  IllustrationCashflow, IllustrationKhata, IllustrationSecurity, 
-  IllustrationGovt, IllustrationUPI 
-} from './illustrations/FeatureIllustrations';
 import { ScrollReveal, HoverEffect } from './animations';
+
+// Clean Editorial Mockup Container for Feature Cards
+function FeatureMockupSlot({ imageSrc, fallbackWidget, alt = 'Feature UI Mockup' }) {
+  if (imageSrc) {
+    return (
+      <div className="w-full h-40 my-3 rounded-2xl overflow-hidden border border-elemental-water/10 bg-canvas-raised shadow-xs group-hover:border-elemental-sky/30 transition-all">
+        <img src={imageSrc} alt={alt} className="w-full h-full object-cover object-top" loading="lazy" />
+      </div>
+    );
+  }
+  return (
+    <div className="w-full h-40 my-3 rounded-2xl p-3 bg-canvas-raised/80 border border-elemental-water/10 flex flex-col justify-center relative overflow-hidden group-hover:border-elemental-sky/30 transition-all shadow-2xs select-none">
+      {fallbackWidget}
+    </div>
+  );
+}
 
 export default function FeatureBentoGrid() {
   return (
-    <section id="features" className="py-20 px-4 md:px-8 max-w-7xl mx-auto relative z-10">
+    <section id="features" className="py-20 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto relative z-10">
       
       {/* Section Header */}
       <ScrollReveal>
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-canvas-raised border border-elemental-sky/40 text-elemental-sky text-xs font-mono shadow-[0_0_15px_rgba(2,132,199,0.15)]">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Feature Taxonomy & Visual Architecture</span>
+            <span>Product Highlights</span>
           </div>
 
-          <h2 className="font-sans text-3xl sm:text-4xl font-extrabold text-elemental-water tracking-tight">
-            Engineered for Absolute Privacy
+          <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl font-extrabold text-elemental-water tracking-tight">
+            Master Your Money with Zero Effort
           </h2>
 
-          <p className="text-sm text-sandstone-muted font-sans max-w-2xl mx-auto leading-relaxed">
-            Vector illustrations detailing VITT's 9 Live (🟢) and 2 Roadmap (⏳) features.
+          <p className="text-sm sm:text-base text-sandstone-muted font-sans max-w-2xl mx-auto leading-relaxed">
+            Automatic UPI tracking, proactive monthly budgets, split bills, and an honest AI coach—all wrapped in 100% private, ad-free software.
           </p>
         </div>
       </ScrollReveal>
@@ -36,10 +47,10 @@ export default function FeatureBentoGrid() {
       {/* Bento Grid Container */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        {/* Card 1: Auto Notification Expense Detection (LIVE) */}
-        <ScrollReveal delay={0.1}>
-          <HoverEffect scale={1.02} y={-8}>
-            <div className="bento-card-container group relative p-6 rounded-3xl houdini-border hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between shadow-xs">
+        {/* Card 1: Auto Notification Expense Detection */}
+        <ScrollReveal delay={0.05}>
+          <HoverEffect scale={1.02} y={-6}>
+            <div className="bento-card-container group relative p-6 rounded-3xl houdini-border hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between shadow-xs h-full bg-canvas">
               <div>
                 <div className="flex items-center justify-between mb-2">
                   <div className="w-10 h-10 rounded-xl bg-elemental-skySoft border border-elemental-sky/30 flex items-center justify-center text-elemental-sky">
@@ -50,270 +61,380 @@ export default function FeatureBentoGrid() {
                   </span>
                 </div>
 
-                {/* Vector Illustration */}
-                <IllustrationNotification />
+                {/* UI Mockup Preview */}
+                <FeatureMockupSlot 
+                  imageSrc="/mockups/feature-upi.png"
+                  fallbackWidget={
+                    <div className="space-y-2 text-left">
+                      <div className="p-2.5 rounded-xl bg-canvas-card border border-elemental-water/10 shadow-xs flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <span className="w-6 h-6 rounded-full bg-elemental-skySoft text-elemental-sky flex items-center justify-center text-xs font-bold">G</span>
+                          <div>
+                            <p className="text-xs font-bold text-elemental-water">Paid ₹150 to Chai Point</p>
+                            <p className="text-[10px] text-sandstone-muted font-mono">Auto-logged • 0 SMS used</p>
+                          </div>
+                        </div>
+                        <span className="text-xs font-mono font-bold text-elemental-fire">-₹150</span>
+                      </div>
+                      <div className="flex items-center justify-between px-2 text-[10px] font-mono text-emerald-600 font-bold">
+                        <span>✓ Category: Dining & Food</span>
+                        <span>Instant Auto-Detection</span>
+                      </div>
+                    </div>
+                  }
+                />
 
-                <h3 className="text-base font-bold text-elemental-water mb-1.5">Auto Expense Detection</h3>
+                <h3 className="text-base font-bold text-elemental-water mb-1.5">Automatic UPI Expense Tracking</h3>
                 <p className="text-xs text-sandstone-muted leading-relaxed mb-3">
-                  Captures transaction alerts from GPay, PhonePe, Paytm, SBI, HDFC, ICICI, and CRED via Android's <code className="font-mono text-elemental-water font-semibold">NotificationListenerService</code>.
+                  Pay for chai, groceries, or shopping as usual. VITT captures payments from GPay, PhonePe, Paytm, CRED, HDFC, SBI, and ICICI the instant you spend.
                 </p>
               </div>
               <div className="p-2.5 rounded-xl bg-canvas-raised border border-elemental-water/10 font-mono text-[11px] text-elemental-water font-semibold">
-                ✓ 0 SMS Permissions Required
+                ✓ Zero Manual Entry • Zero SMS Reading
               </div>
             </div>
           </HoverEffect>
         </ScrollReveal>
 
-        {/* Card 2: On-Device AI Financial Advisor (LIVE) */}
-        <div className="bento-card-container group relative p-6 rounded-3xl houdini-border hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between shadow-xs">
-          <div>
-            <div className="flex items-center justify-between mb-2">
-              <div className="w-10 h-10 rounded-xl bg-elemental-skySoft border border-elemental-sky/30 flex items-center justify-center text-elemental-sky">
-                <Bot className="w-5 h-5" />
+        {/* Card 2: On-Device AI Financial Advisor */}
+        <ScrollReveal delay={0.1}>
+          <HoverEffect scale={1.02} y={-6}>
+            <div className="bento-card-container group relative p-6 rounded-3xl houdini-border hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between shadow-xs h-full bg-canvas">
+              <div>
+                <div className="flex items-center justify-between mb-2">
+                  <div className="w-10 h-10 rounded-xl bg-elemental-skySoft border border-elemental-sky/30 flex items-center justify-center text-elemental-sky">
+                    <Bot className="w-5 h-5" />
+                  </div>
+                  <span className="text-[11px] font-mono font-semibold px-2.5 py-1 rounded-full bg-elemental-skySoft text-elemental-sky border border-elemental-sky/30 flex items-center gap-1">
+                    <CheckCircle2 className="w-3 h-3" /> LIVE
+                  </span>
+                </div>
+
+                {/* UI Mockup Preview */}
+                <FeatureMockupSlot 
+                  imageSrc="/mockups/feature-ai.png"
+                  fallbackWidget={
+                    <div className="space-y-2 text-left">
+                      <div className="p-2 rounded-xl bg-elemental-skySoft text-[11px] text-elemental-water font-medium ml-4 text-right">
+                        "How much did I spend on food this month?"
+                      </div>
+                      <div className="p-2 rounded-xl bg-canvas-card border border-elemental-water/10 text-[11px] text-elemental-water mr-3 shadow-xs">
+                        ₹6,450 across 18 transactions. You're ₹3,550 under your budget!
+                      </div>
+                    </div>
+                  }
+                />
+
+                <h3 className="text-base font-bold text-elemental-water mb-1.5">Private AI Money Coach</h3>
+                <p className="text-xs text-sandstone-muted leading-relaxed mb-3">
+                  Ask questions like "Can I afford this trip?" or "Where did my money go?" and get instant, honest advice without sending data to any cloud.
+                </p>
               </div>
-              <span className="text-[11px] font-mono font-semibold px-2.5 py-1 rounded-full bg-elemental-skySoft text-elemental-sky border border-elemental-sky/30 flex items-center gap-1">
-                <CheckCircle2 className="w-3 h-3" /> LIVE
-              </span>
-            </div>
-
-            {/* Vector Illustration */}
-            <IllustrationAI />
-
-            <h3 className="text-base font-bold text-elemental-water mb-1.5">On-Device Local AI Advisor</h3>
-            <p className="text-xs text-sandstone-muted leading-relaxed mb-3">
-              Runs Gemma 4 E2B / Qwen 3 4B locally via LiteRT-LM. Native Rust SIMD (<code className="font-mono text-elemental-water font-semibold">TurboVec</code>) provides sub-3ms transaction RAG queries.
-            </p>
-          </div>
-          <div className="p-2.5 rounded-xl bg-canvas-raised border border-elemental-water/10 font-mono text-[11px] text-elemental-water font-semibold">
-            ⚡ &gt;130M Ops/sec SIMD Similarity
-          </div>
-        </div>
-
-        {/* Card 3: Encrypted Vault & Vision OCR (LIVE) */}
-        <div className="bento-card-container group relative p-6 rounded-3xl houdini-border hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between shadow-xs">
-          <div>
-            <div className="flex items-center justify-between mb-2">
-              <div className="w-10 h-10 rounded-xl bg-elemental-skySoft border border-elemental-sky/30 flex items-center justify-center text-elemental-sky">
-                <Receipt className="w-5 h-5" />
+              <div className="p-2.5 rounded-xl bg-canvas-raised border border-elemental-water/10 font-mono text-[11px] text-elemental-water font-semibold">
+                ⚡ Instant Answers • 100% Offline
               </div>
-              <span className="text-[11px] font-mono font-semibold px-2.5 py-1 rounded-full bg-elemental-skySoft text-elemental-sky border border-elemental-sky/30 flex items-center gap-1">
-                <CheckCircle2 className="w-3 h-3" /> LIVE
-              </span>
             </div>
+          </HoverEffect>
+        </ScrollReveal>
 
-            {/* Vector Illustration */}
-            <IllustrationOCR />
+        {/* Card 3: Encrypted Vault & Vision OCR */}
+        <ScrollReveal delay={0.15}>
+          <HoverEffect scale={1.02} y={-6}>
+            <div className="bento-card-container group relative p-6 rounded-3xl houdini-border hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between shadow-xs h-full bg-canvas">
+              <div>
+                <div className="flex items-center justify-between mb-2">
+                  <div className="w-10 h-10 rounded-xl bg-elemental-skySoft border border-elemental-sky/30 flex items-center justify-center text-elemental-sky">
+                    <Receipt className="w-5 h-5" />
+                  </div>
+                  <span className="text-[11px] font-mono font-semibold px-2.5 py-1 rounded-full bg-elemental-skySoft text-elemental-sky border border-elemental-sky/30 flex items-center gap-1">
+                    <CheckCircle2 className="w-3 h-3" /> LIVE
+                  </span>
+                </div>
 
-            <h3 className="text-base font-bold text-elemental-water mb-1.5">Encrypted Vault & Vision OCR</h3>
-            <p className="text-xs text-sandstone-muted leading-relaxed mb-3">
-              Offline receipt scanning using Google ML Kit Latin + Devanagari text recognition and encrypted PDF exports.
-            </p>
-          </div>
-          <div className="p-2.5 rounded-xl bg-canvas-raised border border-elemental-water/10 font-mono text-[11px] text-elemental-water font-semibold">
-            🔒 Hardware Key Vault Storage
-          </div>
-        </div>
+                {/* UI Mockup Preview */}
+                <FeatureMockupSlot 
+                  imageSrc="/mockups/feature-vault.png"
+                  fallbackWidget={
+                    <div className="p-3 rounded-xl bg-canvas-card border border-elemental-water/10 shadow-xs flex items-center justify-between text-left">
+                      <div className="space-y-1">
+                        <span className="text-xs font-bold text-elemental-water flex items-center gap-1.5">
+                          <Lock className="w-3.5 h-3.5 text-elemental-sky" /> Apple Store Receipt.pdf
+                        </span>
+                        <p className="text-[10px] text-sandstone-muted font-mono">Encrypted • 100% On-Device OCR</p>
+                      </div>
+                      <span className="text-[10px] font-mono font-bold px-2 py-1 rounded-md bg-emerald-50 text-emerald-700">AES-256</span>
+                    </div>
+                  }
+                />
 
-        {/* Card 4: Envelope Smart Budgets (LIVE) */}
-        <div className="bento-card-container group relative p-6 rounded-3xl houdini-border hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between shadow-xs">
-          <div>
-            <div className="flex items-center justify-between mb-2">
-              <div className="w-10 h-10 rounded-xl bg-elemental-skySoft border border-elemental-sky/30 flex items-center justify-center text-elemental-sky">
-                <PieChart className="w-5 h-5" />
+                <h3 className="text-base font-bold text-elemental-water mb-1.5">Private Document & Bill Vault</h3>
+                <p className="text-xs text-sandstone-muted leading-relaxed mb-3">
+                  Scan paper receipts, warranties, and medical bills in English or Hindi. Everything is safely encrypted inside your phone's hardware security chip.
+                </p>
               </div>
-              <span className="text-[11px] font-mono font-semibold px-2.5 py-1 rounded-full bg-elemental-skySoft text-elemental-sky border border-elemental-sky/30 flex items-center gap-1">
-                <CheckCircle2 className="w-3 h-3" /> LIVE
-              </span>
-            </div>
-
-            {/* Vector Illustration */}
-            <IllustrationBudgets />
-
-            <h3 className="text-base font-bold text-elemental-water mb-1.5">Envelope Smart Budgets</h3>
-            <p className="text-xs text-sandstone-muted leading-relaxed mb-3">
-              Category spending caps with 🟢 Green / 🟡 Yellow / 🔴 Red indicators and built-in purchase impact simulator.
-            </p>
-          </div>
-          <div className="p-2.5 rounded-xl bg-canvas-raised border border-elemental-water/10 font-mono text-[11px] text-elemental-water font-semibold">
-            📊 Purchase Impact Simulator
-          </div>
-        </div>
-
-        {/* Card 5: Financial Goals (LIVE) */}
-        <div className="bento-card-container group relative p-6 rounded-3xl houdini-border hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between shadow-xs">
-          <div>
-            <div className="flex items-center justify-between mb-2">
-              <div className="w-10 h-10 rounded-xl bg-elemental-skySoft border border-elemental-sky/30 flex items-center justify-center text-elemental-sky">
-                <Target className="w-5 h-5" />
+              <div className="p-2.5 rounded-xl bg-canvas-raised border border-elemental-water/10 font-mono text-[11px] text-elemental-water font-semibold">
+                🔒 Hardware-Locked Privacy
               </div>
-              <span className="text-[11px] font-mono font-semibold px-2.5 py-1 rounded-full bg-elemental-skySoft text-elemental-sky border border-elemental-sky/30 flex items-center gap-1">
-                <CheckCircle2 className="w-3 h-3" /> LIVE
-              </span>
             </div>
+          </HoverEffect>
+        </ScrollReveal>
 
-            {/* Vector Illustration */}
-            <IllustrationGoals />
+        {/* Card 4: Envelope Smart Budgets */}
+        <ScrollReveal delay={0.05}>
+          <HoverEffect scale={1.02} y={-6}>
+            <div className="bento-card-container group relative p-6 rounded-3xl houdini-border hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between shadow-xs h-full bg-canvas">
+              <div>
+                <div className="flex items-center justify-between mb-2">
+                  <div className="w-10 h-10 rounded-xl bg-elemental-skySoft border border-elemental-sky/30 flex items-center justify-center text-elemental-sky">
+                    <PieChart className="w-5 h-5" />
+                  </div>
+                  <span className="text-[11px] font-mono font-semibold px-2.5 py-1 rounded-full bg-elemental-skySoft text-elemental-sky border border-elemental-sky/30 flex items-center gap-1">
+                    <CheckCircle2 className="w-3 h-3" /> LIVE
+                  </span>
+                </div>
 
-            <h3 className="text-base font-bold text-elemental-water mb-1.5">Financial Goals Pace Matching</h3>
-            <p className="text-xs text-sandstone-muted leading-relaxed mb-3">
-              Deadlined savings goals matched against your net monthly cashflow surplus pace.
-            </p>
-          </div>
-          <div className="p-2.5 rounded-xl bg-canvas-raised border border-elemental-water/10 font-mono text-[11px] text-elemental-water font-semibold">
-            🎯 Surplus Pace Validation
-          </div>
-        </div>
+                {/* UI Mockup Preview */}
+                <FeatureMockupSlot 
+                  imageSrc="/mockups/feature-budgets.png"
+                  fallbackWidget={
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center justify-between text-xs font-bold text-elemental-water">
+                        <span>Dining & Entertainment</span>
+                        <span className="font-mono text-[11px] text-elemental-sky">₹6,450 / ₹10,000</span>
+                      </div>
+                      <div className="w-full h-2.5 rounded-full bg-canvas overflow-hidden">
+                        <div className="h-full bg-elemental-sky rounded-full" style={{ width: '64.5%' }} />
+                      </div>
+                      <div className="flex items-center justify-between text-[10px] text-sandstone-muted font-mono">
+                        <span>🟢 Safe Spending Pace</span>
+                        <span>₹3,550 left</span>
+                      </div>
+                    </div>
+                  }
+                />
 
-        {/* Card 6: Wealth Calculators (LIVE) */}
-        <div className="bento-card-container group relative p-6 rounded-3xl houdini-border hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between shadow-xs">
-          <div>
-            <div className="flex items-center justify-between mb-2">
-              <div className="w-10 h-10 rounded-xl bg-elemental-skySoft border border-elemental-sky/30 flex items-center justify-center text-elemental-sky">
-                <Calculator className="w-5 h-5" />
+                <h3 className="text-base font-bold text-elemental-water mb-1.5">Smart Envelope Budgets</h3>
+                <p className="text-xs text-sandstone-muted leading-relaxed mb-3">
+                  Set monthly spending caps for dining, groceries, and shopping. Clear green, yellow, and red status bars warn you before you overspend.
+                </p>
               </div>
-              <span className="text-[11px] font-mono font-semibold px-2.5 py-1 rounded-full bg-elemental-skySoft text-elemental-sky border border-elemental-sky/30 flex items-center gap-1">
-                <CheckCircle2 className="w-3 h-3" /> LIVE
-              </span>
-            </div>
-
-            {/* Vector Illustration */}
-            <IllustrationInvestment />
-
-            <h3 className="text-base font-bold text-elemental-water mb-1.5">High-Precision Wealth Calculators</h3>
-            <p className="text-xs text-sandstone-muted leading-relaxed mb-3">
-              Exact mathematical engines for SIP, Lumpsum, Fixed Deposit (quarterly compound), RD, and Loan EMI.
-            </p>
-          </div>
-          <div className="p-2.5 rounded-xl bg-canvas-raised border border-elemental-water/10 font-mono text-[11px] text-elemental-water font-semibold">
-            🧮 Standard Indian Banking Math
-          </div>
-        </div>
-
-        {/* Card 7: Cashflow Runway & Score (LIVE) */}
-        <div className="bento-card-container group relative p-6 rounded-3xl houdini-border hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between shadow-xs">
-          <div>
-            <div className="flex items-center justify-between mb-2">
-              <div className="w-10 h-10 rounded-xl bg-elemental-skySoft border border-elemental-sky/30 flex items-center justify-center text-elemental-sky">
-                <TrendingUp className="w-5 h-5" />
+              <div className="p-2.5 rounded-xl bg-canvas-raised border border-elemental-water/10 font-mono text-[11px] text-elemental-water font-semibold">
+                📊 Proactive Overspending Alerts
               </div>
-              <span className="text-[11px] font-mono font-semibold px-2.5 py-1 rounded-full bg-elemental-skySoft text-elemental-sky border border-elemental-sky/30 flex items-center gap-1">
-                <CheckCircle2 className="w-3 h-3" /> LIVE
-              </span>
             </div>
+          </HoverEffect>
+        </ScrollReveal>
 
-            {/* Vector Illustration */}
-            <IllustrationCashflow />
+        {/* Card 5: Financial Goals */}
+        <ScrollReveal delay={0.1}>
+          <HoverEffect scale={1.02} y={-6}>
+            <div className="bento-card-container group relative p-6 rounded-3xl houdini-border hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between shadow-xs h-full bg-canvas">
+              <div>
+                <div className="flex items-center justify-between mb-2">
+                  <div className="w-10 h-10 rounded-xl bg-elemental-skySoft border border-elemental-sky/30 flex items-center justify-center text-elemental-sky">
+                    <Target className="w-5 h-5" />
+                  </div>
+                  <span className="text-[11px] font-mono font-semibold px-2.5 py-1 rounded-full bg-elemental-skySoft text-elemental-sky border border-elemental-sky/30 flex items-center gap-1">
+                    <CheckCircle2 className="w-3 h-3" /> LIVE
+                  </span>
+                </div>
 
-            <h3 className="text-base font-bold text-elemental-water mb-1.5">Cashflow Runway & Score</h3>
-            <p className="text-xs text-sandstone-muted leading-relaxed mb-3">
-              Multi-horizon cashflow projection charts (30–365 days), runway months estimation, and 0–100 Resilience Score.
-            </p>
-          </div>
-          <div className="p-2.5 rounded-xl bg-canvas-raised border border-elemental-water/10 font-mono text-[11px] text-elemental-water font-semibold">
-            📈 0–100 Resilience Score Model
-          </div>
-        </div>
+                {/* UI Mockup Preview */}
+                <FeatureMockupSlot 
+                  imageSrc="/mockups/feature-goals.png"
+                  fallbackWidget={
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center justify-between text-xs font-bold text-elemental-water">
+                        <span>Emergency Fund Target</span>
+                        <span className="font-mono text-[11px] text-emerald-600">₹1,50,000</span>
+                      </div>
+                      <div className="w-full h-2.5 rounded-full bg-canvas overflow-hidden">
+                        <div className="h-full bg-emerald-500 rounded-full" style={{ width: '80%' }} />
+                      </div>
+                      <div className="flex items-center justify-between text-[10px] text-sandstone-muted font-mono">
+                        <span>80% Completed</span>
+                        <span>Target: Oct 2026</span>
+                      </div>
+                    </div>
+                  }
+                />
 
-        {/* Card 8: Split Groups & Khata (LIVE) */}
-        <div className="bento-card-container group relative p-6 rounded-3xl houdini-border hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between shadow-xs">
-          <div>
-            <div className="flex items-center justify-between mb-2">
-              <div className="w-10 h-10 rounded-xl bg-elemental-skySoft border border-elemental-sky/30 flex items-center justify-center text-elemental-sky">
-                <Users className="w-5 h-5" />
+                <h3 className="text-base font-bold text-elemental-water mb-1.5">Goal Savings & Milestone Tracker</h3>
+                <p className="text-xs text-sandstone-muted leading-relaxed mb-3">
+                  Save for a new phone, vehicle, emergency fund, or dream vacation. VITT calculates your exact completion date based on your real monthly savings.
+                </p>
               </div>
-              <span className="text-[11px] font-mono font-semibold px-2.5 py-1 rounded-full bg-elemental-skySoft text-elemental-sky border border-elemental-sky/30 flex items-center gap-1">
-                <CheckCircle2 className="w-3 h-3" /> LIVE
-              </span>
-            </div>
-
-            {/* Vector Illustration */}
-            <IllustrationKhata />
-
-            <h3 className="text-base font-bold text-elemental-water mb-1.5">Split Groups & Khata IOU Ledger</h3>
-            <p className="text-xs text-sandstone-muted leading-relaxed mb-3">
-              Group trip/rent bill splitting, informal debt tracking, and 1-tap WhatsApp payment reminders.
-            </p>
-          </div>
-          <div className="p-2.5 rounded-xl bg-canvas-raised border border-elemental-water/10 font-mono text-[11px] text-elemental-water font-semibold">
-            💬 WhatsApp Reminder Generator
-          </div>
-        </div>
-
-        {/* Card 9: Sovereign Security & AES-256 (LIVE) */}
-        <div className="bento-card-container group relative p-6 rounded-3xl houdini-border hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between shadow-xs">
-          <div>
-            <div className="flex items-center justify-between mb-2">
-              <div className="w-10 h-10 rounded-xl bg-elemental-skySoft border border-elemental-sky/30 flex items-center justify-center text-elemental-sky">
-                <Lock className="w-5 h-5" />
+              <div className="p-2.5 rounded-xl bg-canvas-raised border border-elemental-water/10 font-mono text-[11px] text-elemental-water font-semibold">
+                🎯 Real-Time Savings Target Pace
               </div>
-              <span className="text-[11px] font-mono font-semibold px-2.5 py-1 rounded-full bg-elemental-skySoft text-elemental-sky border border-elemental-sky/30 flex items-center gap-1">
-                <CheckCircle2 className="w-3 h-3" /> LIVE
-              </span>
             </div>
+          </HoverEffect>
+        </ScrollReveal>
 
-            {/* Vector Illustration */}
-            <IllustrationSecurity />
+        {/* Card 6: Wealth Calculators */}
+        <ScrollReveal delay={0.15}>
+          <HoverEffect scale={1.02} y={-6}>
+            <div className="bento-card-container group relative p-6 rounded-3xl houdini-border hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between shadow-xs h-full bg-canvas">
+              <div>
+                <div className="flex items-center justify-between mb-2">
+                  <div className="w-10 h-10 rounded-xl bg-elemental-skySoft border border-elemental-sky/30 flex items-center justify-center text-elemental-sky">
+                    <Calculator className="w-5 h-5" />
+                  </div>
+                  <span className="text-[11px] font-mono font-semibold px-2.5 py-1 rounded-full bg-elemental-skySoft text-elemental-sky border border-elemental-sky/30 flex items-center gap-1">
+                    <CheckCircle2 className="w-3 h-3" /> LIVE
+                  </span>
+                </div>
 
-            <h3 className="text-base font-bold text-elemental-water mb-1.5">AES-256 SQLCipher Encryption</h3>
-            <p className="text-xs text-sandstone-muted leading-relaxed mb-3">
-              Hardware key store security, local biometric lock (Fingerprint/PIN), and 2-step permanent account purge (<code className="font-mono text-elemental-water font-semibold">"DELETE"</code>).
-            </p>
-          </div>
-          <div className="p-2.5 rounded-xl bg-canvas-raised border border-elemental-water/10 font-mono text-[11px] text-elemental-water font-semibold">
-            🔑 Hardware Key Store Security
-          </div>
-        </div>
+                {/* UI Mockup Preview */}
+                <FeatureMockupSlot 
+                  imageSrc="/mockups/feature-sip.png"
+                  fallbackWidget={
+                    <div className="p-3 rounded-xl bg-canvas-card border border-elemental-water/10 shadow-xs flex items-center justify-between text-left">
+                      <div>
+                        <p className="text-[10px] text-sandstone-muted font-mono">₹10,000 / mo @ 14% (10 Yrs)</p>
+                        <p className="text-base font-bold font-mono text-elemental-water">₹26,20,915</p>
+                      </div>
+                      <span className="text-[10px] font-mono font-bold px-2 py-1 rounded-md bg-elemental-skySoft text-elemental-sky">+118% Return</span>
+                    </div>
+                  }
+                />
 
-        {/* Roadmap Card 1: Govt Schemes Directory (UPCOMING) */}
-        <div className="bento-card-container group relative p-6 rounded-3xl bg-canvas-raised/50 fine-border hover:border-elemental-fire/40 transition-all duration-300 flex flex-col justify-between opacity-90 shadow-xs">
-          <div>
-            <div className="flex items-center justify-between mb-2">
-              <div className="w-10 h-10 rounded-xl bg-elemental-fireSoft border border-elemental-fire/30 flex items-center justify-center text-elemental-fire">
-                <Landmark className="w-5 h-5" />
+                <h3 className="text-base font-bold text-elemental-water mb-1.5">SIP, FD & Wealth Calculators</h3>
+                <p className="text-xs text-sandstone-muted leading-relaxed mb-3">
+                  Calculate mutual fund SIP compounding, Fixed Deposit interest, RD maturity, and home/personal loan EMIs with 100% mathematical accuracy.
+                </p>
               </div>
-              <span className="text-[11px] font-mono font-semibold px-2.5 py-1 rounded-full bg-elemental-fireSoft text-elemental-fire border border-elemental-fire/30 flex items-center gap-1">
-                <Clock className="w-3 h-3" /> ROADMAP
-              </span>
-            </div>
-
-            {/* Vector Illustration */}
-            <IllustrationGovt />
-
-            <h3 className="text-base font-bold text-elemental-water mb-1.5">Govt Schemes Eligibility Engine</h3>
-            <p className="text-xs text-sandstone-muted leading-relaxed mb-3">
-              Indian micro-enterprise scheme directory (MUDRA, PMEGP, Stand-Up India, Startup India Seed Fund) with state/income eligibility matching.
-            </p>
-          </div>
-          <div className="p-2.5 rounded-xl bg-canvas border border-elemental-water/10 font-mono text-[11px] text-elemental-fire font-semibold">
-            ⏳ Planned Horizon Feature
-          </div>
-        </div>
-
-        {/* Roadmap Card 2: Scheduled Payments & UPI (UPCOMING) */}
-        <div className="bento-card-container group relative p-6 rounded-3xl bg-canvas-raised/50 fine-border hover:border-elemental-fire/40 transition-all duration-300 flex flex-col justify-between opacity-90 shadow-xs">
-          <div>
-            <div className="flex items-center justify-between mb-2">
-              <div className="w-10 h-10 rounded-xl bg-elemental-fireSoft border border-elemental-fire/30 flex items-center justify-center text-elemental-fire">
-                <CreditCard className="w-5 h-5" />
+              <div className="p-2.5 rounded-xl bg-canvas-raised border border-elemental-water/10 font-mono text-[11px] text-elemental-water font-semibold">
+                🧮 Standard Indian Banking Math
               </div>
-              <span className="text-[11px] font-mono font-semibold px-2.5 py-1 rounded-full bg-elemental-fireSoft text-elemental-fire border border-elemental-fire/30 flex items-center gap-1">
-                <Clock className="w-3 h-3" /> ROADMAP
-              </span>
             </div>
+          </HoverEffect>
+        </ScrollReveal>
 
-            {/* Vector Illustration */}
-            <IllustrationUPI />
+        {/* Card 7: Cashflow Runway & Score */}
+        <ScrollReveal delay={0.05}>
+          <HoverEffect scale={1.02} y={-6}>
+            <div className="bento-card-container group relative p-6 rounded-3xl houdini-border hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between shadow-xs h-full bg-canvas">
+              <div>
+                <div className="flex items-center justify-between mb-2">
+                  <div className="w-10 h-10 rounded-xl bg-elemental-skySoft border border-elemental-sky/30 flex items-center justify-center text-elemental-sky">
+                    <TrendingUp className="w-5 h-5" />
+                  </div>
+                  <span className="text-[11px] font-mono font-semibold px-2.5 py-1 rounded-full bg-elemental-skySoft text-elemental-sky border border-elemental-sky/30 flex items-center gap-1">
+                    <CheckCircle2 className="w-3 h-3" /> LIVE
+                  </span>
+                </div>
 
-            <h3 className="text-base font-bold text-elemental-water mb-1.5">Scheduled Payments & UPI Intents</h3>
-            <p className="text-xs text-sandstone-muted leading-relaxed mb-3">
-              Recurring bill tracker with due date alerts and direct <code className="font-mono text-elemental-water font-semibold">upi://pay</code> intents opening GPay, PhonePe, Paytm with zero fees.
-            </p>
-          </div>
-          <div className="p-2.5 rounded-xl bg-canvas border border-elemental-water/10 font-mono text-[11px] text-elemental-fire font-semibold">
-            ⏳ Planned Horizon Feature
-          </div>
-        </div>
+                {/* UI Mockup Preview */}
+                <FeatureMockupSlot 
+                  imageSrc="/mockups/feature-cashflow.png"
+                  fallbackWidget={
+                    <div className="p-3 rounded-xl bg-canvas-card border border-elemental-water/10 shadow-xs flex items-center justify-between text-left">
+                      <div className="space-y-0.5">
+                        <p className="text-[10px] text-sandstone-muted font-mono">Financial Safety Runway</p>
+                        <p className="text-sm font-bold text-elemental-water">180 Days (6 Months)</p>
+                      </div>
+                      <div className="w-10 h-10 rounded-full border-2 border-emerald-500 flex items-center justify-center font-mono font-bold text-xs text-emerald-600">
+                        92
+                      </div>
+                    </div>
+                  }
+                />
+
+                <h3 className="text-base font-bold text-elemental-water mb-1.5">Cashflow Forecast & Safety Runway</h3>
+                <p className="text-xs text-sandstone-muted leading-relaxed mb-3">
+                  Know exactly how many months your emergency savings will last if income stops, with a clear 0–100 financial health score.
+                </p>
+              </div>
+              <div className="p-2.5 rounded-xl bg-canvas-raised border border-elemental-water/10 font-mono text-[11px] text-elemental-water font-semibold">
+                📈 180-Day Emergency Runway Score
+              </div>
+            </div>
+          </HoverEffect>
+        </ScrollReveal>
+
+        {/* Card 8: Split Groups & Khata */}
+        <ScrollReveal delay={0.1}>
+          <HoverEffect scale={1.02} y={-6}>
+            <div className="bento-card-container group relative p-6 rounded-3xl houdini-border hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between shadow-xs h-full bg-canvas">
+              <div>
+                <div className="flex items-center justify-between mb-2">
+                  <div className="w-10 h-10 rounded-xl bg-elemental-skySoft border border-elemental-sky/30 flex items-center justify-center text-elemental-sky">
+                    <Users className="w-5 h-5" />
+                  </div>
+                  <span className="text-[11px] font-mono font-semibold px-2.5 py-1 rounded-full bg-elemental-skySoft text-elemental-sky border border-elemental-sky/30 flex items-center gap-1">
+                    <CheckCircle2 className="w-3 h-3" /> LIVE
+                  </span>
+                </div>
+
+                {/* UI Mockup Preview */}
+                <FeatureMockupSlot 
+                  imageSrc="/mockups/feature-split.png"
+                  fallbackWidget={
+                    <div className="p-3 rounded-xl bg-canvas-card border border-elemental-water/10 shadow-xs flex items-center justify-between text-left">
+                      <div>
+                        <p className="text-xs font-bold text-elemental-water">Goa Trip Dinner (4 People)</p>
+                        <p className="text-[10px] text-sandstone-muted font-mono">Rahul owes you ₹850</p>
+                      </div>
+                      <span className="text-[10px] font-mono font-bold px-2 py-1 rounded-md bg-emerald-50 text-emerald-700">UPI Settle</span>
+                    </div>
+                  }
+                />
+
+                <h3 className="text-base font-bold text-elemental-water mb-1.5">Split Bills & Settle via UPI in 1 Tap</h3>
+                <p className="text-xs text-sandstone-muted leading-relaxed mb-3">
+                  Track shared trips, flat rent, and group dinners. See who owes whom with instant WhatsApp reminders and deep-linked UPI QR settlement.
+                </p>
+              </div>
+              <div className="p-2.5 rounded-xl bg-canvas-raised border border-elemental-water/10 font-mono text-[11px] text-elemental-water font-semibold">
+                💬 1-Tap QR Bill Settlement
+              </div>
+            </div>
+          </HoverEffect>
+        </ScrollReveal>
+
+        {/* Card 9: Sovereign Security & AES-256 */}
+        <ScrollReveal delay={0.15}>
+          <HoverEffect scale={1.02} y={-6}>
+            <div className="bento-card-container group relative p-6 rounded-3xl houdini-border hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between shadow-xs h-full bg-canvas">
+              <div>
+                <div className="flex items-center justify-between mb-2">
+                  <div className="w-10 h-10 rounded-xl bg-elemental-skySoft border border-elemental-sky/30 flex items-center justify-center text-elemental-sky">
+                    <Lock className="w-5 h-5" />
+                  </div>
+                  <span className="text-[11px] font-mono font-semibold px-2.5 py-1 rounded-full bg-elemental-skySoft text-elemental-sky border border-elemental-sky/30 flex items-center gap-1">
+                    <CheckCircle2 className="w-3 h-3" /> LIVE
+                  </span>
+                </div>
+
+                {/* UI Mockup Preview */}
+                <FeatureMockupSlot 
+                  imageSrc="/mockups/feature-security.png"
+                  fallbackWidget={
+                    <div className="p-3 rounded-xl bg-canvas-card border border-elemental-water/10 shadow-xs flex items-center justify-between text-left">
+                      <div className="flex items-center gap-2">
+                        <ShieldCheck className="w-5 h-5 text-elemental-sky" />
+                        <div>
+                          <p className="text-xs font-bold text-elemental-water">Biometric Fingerprint Lock</p>
+                          <p className="text-[10px] text-sandstone-muted font-mono">Zero Cloud Uploads</p>
+                        </div>
+                      </div>
+                      <span className="text-[10px] font-mono font-bold text-emerald-600">Active</span>
+                    </div>
+                  }
+                />
+
+                <h3 className="text-base font-bold text-elemental-water mb-1.5">100% Private & Ad-Free Forever</h3>
+                <p className="text-xs text-sandstone-muted leading-relaxed mb-3">
+                  No phone numbers required, no third-party trackers, and zero loan telemarketers calling you. Built for public utility by an independent developer.
+                </p>
+              </div>
+              <div className="p-2.5 rounded-xl bg-canvas-raised border border-elemental-water/10 font-mono text-[11px] text-elemental-water font-semibold">
+                🛡️ Zero Ads • Zero Cloud Leaks
+              </div>
+            </div>
+          </HoverEffect>
+        </ScrollReveal>
 
       </div>
     </section>

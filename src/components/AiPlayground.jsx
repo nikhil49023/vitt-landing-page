@@ -29,15 +29,15 @@ export default function AiPlayground() {
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto space-y-4 mb-14">
         <span className="px-3.5 py-1 rounded-full bg-elemental-skySoft text-elemental-sky font-mono text-xs font-semibold">
-          Interactive AI Playground
+          On-Device Financial Intelligence
         </span>
 
         <h2 className="font-sans text-3xl sm:text-4xl font-extrabold text-elemental-water tracking-tight">
-          Experience On-Device AI Intelligence
+          Your Private AI Financial Advisor
         </h2>
 
         <p className="text-sm text-sandstone-muted font-sans max-w-xl mx-auto leading-relaxed">
-          Test how VITT's local LLM (Gemma 4 E2B / Qwen 3 4B) answers financial questions offline without sending data to any cloud API.
+          Ask questions, simulate purchases, and get personalized wealth guidance from the best on-device AI financial advisor—100% offline.
         </p>
       </div>
 

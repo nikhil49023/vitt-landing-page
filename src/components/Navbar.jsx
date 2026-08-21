@@ -8,10 +8,12 @@ export default function Navbar({ onOpenLegal, onOpenTechnical }) {
         
         {/* Brand Logo & Version Pill */}
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-elemental-water via-elemental-sky to-elemental-sky p-[1.5px] shadow-md shadow-elemental-sky/20">
-            <div className="w-full h-full rounded-xl bg-canvas flex items-center justify-center">
-              <span className="font-mono text-xl font-extrabold text-elemental-water tracking-tighter">V</span>
-            </div>
+          <div className="w-10 h-10 rounded-xl overflow-hidden shadow-md shadow-elemental-sky/20 border border-elemental-sky/30 bg-[#071710] flex items-center justify-center">
+            <img 
+              src="./vitt_logo.png" 
+              alt="VITT Logo" 
+              className="w-full h-full object-cover" 
+            />
           </div>
           <div>
             <div className="flex items-center gap-2">
@@ -20,13 +22,14 @@ export default function Navbar({ onOpenLegal, onOpenTechnical }) {
                 v3.0.0
               </span>
             </div>
-            <p className="text-[10px] text-sandstone-muted font-mono hidden sm:block">Sovereign Personal Finance</p>
+            <p className="text-[10px] text-sandstone-muted font-mono hidden sm:block">Sovereign Financial Companion · 100% On-Device</p>
           </div>
         </div>
 
         {/* Navigation Links */}
         <nav className="hidden md:flex items-center gap-6 text-xs font-medium text-sandstone-muted">
           <a href="#features" className="hover:text-elemental-water transition-colors">Features</a>
+          <a href="#spotlight" className="hover:text-elemental-water transition-colors">Capabilities</a>
           <a href="#architecture" className="hover:text-elemental-water transition-colors">Architecture</a>
           <button 
             onClick={onOpenTechnical}
@@ -35,20 +38,22 @@ export default function Navbar({ onOpenLegal, onOpenTechnical }) {
             <Code2 className="w-3.5 h-3.5 text-elemental-sky" />
             <span>Tech Specs</span>
           </button>
-          <button 
-            onClick={onOpenLegal}
+          <a 
+            href="./privacy_policy.html"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hover:text-elemental-water transition-colors flex items-center gap-1"
           >
             <BookOpen className="w-3.5 h-3.5 text-elemental-fire" />
-            <span>Privacy & Legal</span>
-          </button>
+            <span>Privacy Policy</span>
+          </a>
         </nav>
 
         {/* Action Button: Download APK */}
         <div className="flex items-center gap-3">
           <div className="hidden lg:flex items-center gap-1.5 px-3 py-1 rounded-full bg-canvas-raised border border-elemental-water/10 text-[11px] font-mono text-sandstone-dark">
             <Lock className="w-3 h-3 text-elemental-sky" />
-            <span>100% On-Device</span>
+            <span>100% Private & Offline</span>
           </div>
 
           <a
@@ -58,7 +63,7 @@ export default function Navbar({ onOpenLegal, onOpenTechnical }) {
             className="group relative inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-elemental-water text-canvas font-semibold text-xs transition-all duration-300 hover:bg-elemental-sky hover:shadow-lg hover:shadow-elemental-sky/20 active:scale-95"
           >
             <Download className="w-4 h-4 transition-transform group-hover:-translate-y-0.5" />
-            <span>Get VITT APK</span>
+            <span>Get VITT v3.0.0</span>
           </a>
         </div>
 
@@ -66,3 +71,4 @@ export default function Navbar({ onOpenLegal, onOpenTechnical }) {
     </header>
   );
 }
+

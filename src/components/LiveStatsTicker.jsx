@@ -32,10 +32,10 @@ export default function LiveStatsTicker() {
         
         <div className="text-center max-w-2xl mx-auto mb-10 space-y-2">
           <h3 className="font-sans text-2xl md:text-3xl font-extrabold text-elemental-water">
-            Sovereignty by the Numbers
+            The Gold Standard in Personal Finance
           </h3>
           <p className="text-xs text-sandstone-muted font-mono">
-            Empirical benchmark metrics of VITT's local execution stack
+            Benchmark performance metrics of the best personal financial management application
           </p>
         </div>
 

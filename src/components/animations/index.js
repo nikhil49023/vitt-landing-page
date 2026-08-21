@@ -6,3 +6,4 @@ export { default as Sparkles } from './Sparkles';
 export { default as BackgroundBeams } from './BackgroundBeams';
 export { default as WavyBackground } from './WavyBackground';
 export { default as InfiniteMovingCards } from './InfiniteMovingCards';
+export { default as SpotlightCard } from './SpotlightCard';

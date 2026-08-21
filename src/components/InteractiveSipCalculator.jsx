@@ -37,15 +37,15 @@ export default function InteractiveSipCalculator() {
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-14">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-canvas-raised border border-elemental-sky/30 text-elemental-sky text-xs font-mono">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Interactive Wealth Calculator</span>
+            <span>Wealth Planning & Growth Engine</span>
           </div>
 
           <h2 className="font-sans text-3xl sm:text-4xl font-extrabold text-elemental-water tracking-tight">
-            Calculate Your Future Wealth (SIP Engine)
+            Plan Your Wealth with Precision Compounding
           </h2>
 
           <p className="text-sm text-sandstone-muted font-sans max-w-xl mx-auto leading-relaxed">
-            Drag the sliders below to calculate your compounding returns with standard Indian banking math.
+            The best personal finance app doesn't just track expenses—it accelerates your journey to financial freedom with institutional-grade compounding math.
           </p>
         </div>
       </ScrollReveal>

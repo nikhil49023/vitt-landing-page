@@ -17,20 +17,16 @@ import ModalDialog from './components/ModalDialog';
 import LegalModalContent from './components/LegalModalContent';
 import TechnicalModalContent from './components/TechnicalModalContent';
 
-// Lazy load heavy components for better performance
+// Lazy load interactive widgets for fast initial load
 const AiPlayground = lazy(() => import('./components/AiPlayground'));
 const InteractiveSipCalculator = lazy(() => import('./components/InteractiveSipCalculator'));
-const FeatureSpotlight = lazy(() => import('./components/FeatureSpotlight'));
-const PhoneShowcasePinned = lazy(() => import('./components/PhoneShowcasePinned'));
 const ComparisonTable = lazy(() => import('./components/ComparisonTable'));
 const LiveStatsTicker = lazy(() => import('./components/LiveStatsTicker'));
-const ArchitectureSection = lazy(() => import('./components/ArchitectureSection'));
-const ArchitecturePipeline = lazy(() => import('./components/ArchitecturePipeline'));
 
 // Loading fallback component
 const LoadingFallback = () => (
-  <div className="flex items-center justify-center py-20">
-    <div className="w-8 h-8 border-2 border-elemental-sky/30 border-t-elemental-sky rounded-full animate-spin" />
+  <div className="flex items-center justify-center py-16">
+    <div className="w-7 h-7 border-2 border-elemental-sky/30 border-t-elemental-sky rounded-full animate-spin" />
   </div>
 );
 
@@ -40,7 +36,7 @@ export default function App() {
 
   return (
     <SmoothScroll>
-      <div className="min-h-screen bg-canvas text-elemental-water selection:bg-elemental-sky/20 selection:text-elemental-water relative overflow-hidden">
+      <div className="min-h-screen bg-canvas text-elemental-water selection:bg-elemental-sky/20 selection:text-elemental-water relative overflow-x-hidden">
         
         {/* Skip to main content - Accessibility */}
         <a href="#main-content" className="skip-link">
@@ -59,70 +55,56 @@ export default function App() {
           onOpenTechnical={() => setTechnicalOpen(true)}
         />
 
-        {/* Promotional Main Flow */}
+        {/* Main Flow */}
         <main id="main-content" className="relative">
-          {/* Promotional Hero */}
+          
+          {/* 1. Hero Section with Phone Mockup Frame */}
           <HeroSection 
             onOpenTechnical={() => setTechnicalOpen(true)}
             onOpenLegal={() => setLegalOpen(true)}
           />
 
-          {/* Trust Badges */}
+          {/* 2. Trust & Security Badges */}
           <TrustBadges />
 
-          {/* Supported Banks Ticker */}
+          {/* 3. Supported UPI & Banking Apps Ticker */}
           <LogoCloud />
 
-          {/* 3 Simple Setup Steps */}
+          {/* 4. 3 Simple Setup Steps */}
           <HowItWorks />
 
-          {/* Lazy loaded components */}
+          {/* 5. Clean Feature Bento Grid with Mockup Slots */}
+          <FeatureBentoGrid />
+
+          {/* 6. Interactive Live Notification Simulator */}
+          <LiveNotificationDemo />
+
+          {/* 7. Lazy Loaded Interactive Sandbox & Calculators */}
           <Suspense fallback={<LoadingFallback />}>
-            {/* Interactive AI Playground Sandbox */}
+            {/* Interactive AI Money Coach Playground */}
             <AiPlayground />
 
-            {/* Interactive Wealth & SIP Calculator Widget */}
+            {/* Interactive Wealth Compounding & SIP Calculator */}
             <InteractiveSipCalculator />
-
-            {/* Landify Feature Spotlight Switcher */}
-            <FeatureSpotlight />
-
-            {/* Pinned 3D Smartphone Feature Showcase */}
-            <PhoneShowcasePinned />
 
             {/* VITT vs Traditional Apps Comparison */}
             <ComparisonTable />
 
-            {/* Statistics Ticker */}
+            {/* Live Statistics & Performance Metrics */}
             <LiveStatsTicker />
           </Suspense>
 
-          {/* Vector Illustrated Feature Bento Grid */}
-          <FeatureBentoGrid />
-
-          {/* Live Notification Demo */}
-          <LiveNotificationDemo />
-
-          {/* Sovereign Use-Cases */}
+          {/* 8. User Stories & Use-Cases */}
           <TestimonialSection />
 
-          {/* Promotional FAQ */}
+          {/* 9. Frequently Asked Questions */}
           <FaqAccordion />
 
-          <Suspense fallback={<LoadingFallback />}>
-            {/* Technical Architecture Pipeline */}
-            <ArchitecturePipeline />
-
-            {/* Technical Architecture Details */}
-            <ArchitectureSection 
-              onOpenTechnical={() => setTechnicalOpen(true)}
-            />
-          </Suspense>
-
-          {/* High-Conversion Bottom CTA Banner */}
+          {/* 10. High-Conversion Bottom CTA Banner */}
           <CtaBanner 
             onOpenTechnical={() => setTechnicalOpen(true)}
           />
+
         </main>
 
         {/* Footer */}
@@ -131,7 +113,7 @@ export default function App() {
           onOpenTechnical={() => setTechnicalOpen(true)}
         />
 
-        {/* Legal Modal */}
+        {/* Redesigned 4-Tab Legal & DPDP Act 2023 Policy Modal */}
         <ModalDialog
           isOpen={legalOpen}
           onClose={() => setLegalOpen(false)}
@@ -140,11 +122,11 @@ export default function App() {
           <LegalModalContent />
         </ModalDialog>
 
-        {/* Technical Specs Modal */}
+        {/* Technical Architecture & Specifications Modal */}
         <ModalDialog
           isOpen={technicalOpen}
           onClose={() => setTechnicalOpen(false)}
-          title="VITT v3.0.0 Hardware RAM Guard & Technical Specs"
+          title="Technical Architecture & Engine Specifications"
         >
           <TechnicalModalContent />
         </ModalDialog>

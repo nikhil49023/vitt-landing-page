@@ -60,20 +60,20 @@ export default function TestimonialSection() {
   return (
     <section className="py-20 px-4 md:px-8 max-w-7xl mx-auto relative z-10 overflow-hidden">
       
-      {/* Landify Header */}
+      {/* Header */}
       <ScrollReveal>
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-canvas-raised border border-elemental-sky/30 text-elemental-sky text-xs font-mono">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Landify Sovereign Use-Cases</span>
+            <span>Loved by Users Across India</span>
           </div>
 
           <h2 className="font-sans text-3xl sm:text-4xl font-extrabold text-elemental-water tracking-tight">
-            Tailored for Indian Economic Life
+            Why Users Call VITT the Best Personal Finance App
           </h2>
 
           <p className="text-sm text-sandstone-muted font-sans max-w-2xl mx-auto leading-relaxed">
-            Designed specifically for household budgeting, student bill splitting, and informal debt tracking.
+            Real stories of effortless expense tracking, stress-free household budgeting, and complete financial peace of mind.
           </p>
         </div>
       </ScrollReveal>

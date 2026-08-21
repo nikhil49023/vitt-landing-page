@@ -6,38 +6,38 @@ export default function ComparisonTable() {
   const COMPARISONS = [
     {
       feature: 'Price & Subscriptions',
-      vitt: '100% Free Forever (0 Ads, 0 Paywalls)',
-      others: 'Paid Monthly Plans / Invasive Ads',
+      vitt: '100% Free Forever (Zero Ads, Zero Paywalls)',
+      others: 'Monthly Subscriptions or In-App Ads',
       status: true
     },
     {
-      feature: 'Financial Data Location',
-      vitt: '100% Stored Privately On Your Phone',
-      others: 'Uploaded to Remote Cloud Servers',
+      feature: 'Your Financial Data',
+      vitt: 'Stored 100% Privately On Your Phone',
+      others: 'Uploaded to Company Cloud Servers',
       status: true
     },
     {
-      feature: 'SMS Inbox Permission',
-      vitt: 'ZERO SMS Access Needed (`READ_SMS` Free)',
-      others: 'Requires Invasive Full SMS Reading',
+      feature: 'SMS Inbox Access',
+      vitt: 'Zero SMS Access (Never reads OTPs or personal texts)',
+      others: 'Reads Full SMS Inbox',
       status: true
     },
     {
       feature: 'AI Financial Advisor',
       vitt: 'Private On-Device AI (Works 100% Offline)',
-      others: 'Cloud AI / None',
+      others: 'Sends Conversations to Cloud or None',
       status: true
     },
     {
-      feature: 'Receipt & Document Vault',
-      vitt: 'Encrypted Local Storage + Offline OCR',
-      others: 'Cloud Photo Uploads or None',
+      feature: 'Receipt & Warranty Vault',
+      vitt: 'Hardware-Encrypted Local Storage + Offline OCR',
+      others: 'Requires Cloud Uploads or None',
       status: true
     },
     {
-      feature: 'Group Bill Splitting & Udhar',
-      vitt: 'Built-in Khata Ledger + 1-Tap WhatsApp',
-      others: 'Requires Separate Paid Apps',
+      feature: 'Group Bill Splitting',
+      vitt: 'Built-in 1-Tap UPI QR Settle + WhatsApp Reminders',
+      others: 'Requires Separate Paid Apps (Splitwise, etc.)',
       status: true
     }
   ];
@@ -48,16 +48,16 @@ export default function ComparisonTable() {
       {/* Header */}
       <ScrollReveal>
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-14">
-          <span className="px-3.5 py-1 rounded-full bg-elemental-fireSoft text-elemental-fire font-mono text-xs font-semibold">
-            Why VITT is Different
+          <span className="px-3.5 py-1 rounded-full bg-elemental-skySoft text-elemental-sky font-mono text-xs font-semibold">
+            Clear Honest Comparison
           </span>
 
           <h2 className="font-sans text-3xl sm:text-4xl font-extrabold text-elemental-water tracking-tight">
-            VITT vs. Traditional Finance Apps
+            How VITT Compares to Other Apps
           </h2>
 
           <p className="text-sm text-sandstone-muted font-sans max-w-xl mx-auto leading-relaxed">
-            See how VITT protects your pocket and your privacy compared to cloud-based expense trackers.
+            See how VITT protects your peace of mind compared to traditional apps that sell your data or bombard you with loan calls.
           </p>
         </div>
       </ScrollReveal>

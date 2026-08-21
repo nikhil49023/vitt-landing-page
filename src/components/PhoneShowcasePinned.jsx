@@ -89,7 +89,7 @@ export default function PhoneShowcasePinned() {
           
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-canvas-raised border border-elemental-sky/30 text-elemental-sky text-xs font-mono">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Interactive Pinned Showcase (Scroll to Scrub)</span>
+            <span>Interactive Mobile Flow (Scroll to Explore)</span>
           </div>
 
           <div className="space-y-3 min-h-[160px]">

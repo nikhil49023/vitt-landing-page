@@ -45,7 +45,7 @@ export default function FaqAccordion() {
         </h2>
 
         <p className="text-sm text-sandstone-muted font-sans max-w-lg mx-auto leading-relaxed">
-          Everything you need to know about VITT's features, privacy guarantees, and local AI.
+          Everything you need to know about why VITT is the best personal financial management application.
         </p>
       </div>
 

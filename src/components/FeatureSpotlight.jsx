@@ -69,15 +69,15 @@ export default function FeatureSpotlight() {
       <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-canvas-raised border border-elemental-sky/30 text-elemental-sky text-xs font-mono">
           <Sparkles className="w-3.5 h-3.5" />
-          <span>Landify Feature Spotlight</span>
+          <span>Best-in-Class Capabilities</span>
         </div>
 
         <h2 className="font-sans text-3xl sm:text-4xl font-extrabold text-elemental-water tracking-tight">
-          How VITT Protects Your Financial Sovereignty
+          Engineered to Be the Best Personal Finance App
         </h2>
 
         <p className="text-sm text-sandstone-muted font-sans max-w-2xl mx-auto leading-relaxed">
-          Select a feature below to explore its local architecture and on-device execution mechanics.
+          Explore the industry-leading capabilities and local technologies that make VITT the ultimate personal financial management application.
         </p>
       </div>
 

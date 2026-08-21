@@ -68,15 +68,15 @@ export default function LiveNotificationDemo() {
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-canvas-raised border border-elemental-sky/30 text-elemental-sky text-xs font-mono">
             <BellRing className="w-3.5 h-3.5" />
-            <span>Live Notification Parsing Demo</span>
+            <span>Zero-Touch Expense Tracking</span>
           </div>
 
           <h2 className="font-sans text-3xl sm:text-4xl font-extrabold text-elemental-water tracking-tight">
-            Watch VITT Parse Your Bank Alerts
+            The Best Automated Expense Tracker in Action
           </h2>
 
           <p className="text-sm text-sandstone-muted font-sans max-w-2xl mx-auto leading-relaxed">
-            Real-time demonstration of how VITT automatically categorizes transactions from banking notifications.
+            Witness how VITT instantly captures, categorizes, and logs payment notifications from GPay, PhonePe, Paytm, and leading Indian banks in real-time.
           </p>
         </div>
       </ScrollReveal>

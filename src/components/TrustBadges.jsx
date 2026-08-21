@@ -5,26 +5,26 @@ import { ScrollReveal, HoverEffect } from './animations';
 const trustBadges = [
   {
     icon: ShieldCheck,
-    label: "DPDP Act 2023",
-    description: "Full Compliance",
+    label: "#1 in Privacy",
+    description: "Zero Cloud Uploads",
     color: "sky"
   },
   {
     icon: Lock,
-    label: "AES-256",
-    description: "Military-Grade Encryption",
+    label: "Bank-Grade Vault",
+    description: "Hardware-Locked Storage",
     color: "water"
   },
   {
     icon: EyeOff,
-    label: "Zero SMS",
-    description: "No Inbox Reading",
+    label: "Zero SMS Reading",
+    description: "100% Private UPI Tracking",
     color: "earth"
   },
   {
     icon: Fingerprint,
-    label: "Biometric",
-    description: "Hardware Security",
+    label: "100% Free Forever",
+    description: "Zero Ads • Zero Spam Calls",
     color: "fire"
   }
 ];
