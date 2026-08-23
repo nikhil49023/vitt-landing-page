@@ -3,103 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VITT — Terms of Service & Usage Agreement</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+    <title>Terms of Service — VITT: Offline Expense Tracker</title>
     <style>
         :root {
-            --bg-canvas: #0E2218;
-            --surface-card: #153123;
-            --surface-raised: #1B3D2D;
-            --border-warm: #26543F;
-            --text-heading: #FAF7F2;
-            --text-body: #B6C9BE;
-            --text-muted: #829A8C;
-            --sage-accent: #5EA374;
-            --terracotta-accent: #DE7B5C;
-            --ochre-amber: #D8A951;
+            --bg-color: #FAFAFA;
+            --card-bg: #FFFFFF;
+            --text-primary: #1F2937;
+            --text-secondary: #4B5563;
+            --text-muted: #6B7280;
+            --border-color: #E5E7EB;
+            --primary-accent: #0D9488;
+            --primary-light: #F0FDFA;
+            --tag-bg: #F3F4F6;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            background-color: var(--bg-canvas);
-            color: var(--text-body);
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            line-height: 1.75;
-            padding: 56px 20px;
-            background-image: 
-                radial-gradient(circle at 50% 0%, rgba(94, 163, 116, 0.08) 0%, transparent 60%),
-                linear-gradient(to right, rgba(94, 163, 116, 0.04) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(94, 163, 116, 0.04) 1px, transparent 1px);
-            background-size: 100% 100%, 48px 48px, 48px 48px;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.65;
+            padding: 40px 20px;
         }
-        .container { max-width: 880px; margin: 0 auto; }
-        header { text-align: center; margin-bottom: 44px; }
-        .logo-badge {
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+        }
+        header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+        .app-badge {
             display: inline-block;
-            background: linear-gradient(145deg, #183A2B, #0E2218);
-            border: 2px solid var(--sage-accent);
-            padding: 10px 28px;
-            border-radius: 30px;
-            font-family: 'Lora', serif;
-            font-size: 26px;
+            background: var(--primary-light);
+            color: var(--primary-accent);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            border: 1px solid rgba(13, 148, 136, 0.2);
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+        .meta-text {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+        h2.section-title {
+            font-size: 18px;
             font-weight: 700;
-            letter-spacing: 4px;
-            color: var(--text-heading);
+            color: var(--text-primary);
+            margin-top: 28px;
+            margin-bottom: 12px;
+            border-left: 4px solid var(--primary-accent);
+            padding-left: 10px;
+        }
+        p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 14px;
+        }
+        ul, ol {
+            padding-left: 24px;
             margin-bottom: 16px;
-            box-shadow: 0 0 35px rgba(94, 163, 116, 0.25);
         }
-        h1 { font-family: 'Lora', serif; font-size: 32px; font-weight: 700; color: var(--text-heading); margin-bottom: 10px; }
-        .subtitle { color: var(--text-muted); font-size: 13.5px; margin-bottom: 16px; }
-        .section {
-            background: var(--surface-card);
-            border: 1px solid var(--border-warm);
-            border-radius: 18px;
-            padding: 28px;
-            margin-bottom: 24px;
+        li {
+            font-size: 14.5px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
         }
-        .section h3 { font-family: 'Lora', serif; font-size: 18px; font-weight: 700; color: var(--text-heading); margin-bottom: 14px; }
-        .section p, .section li { font-size: 14px; color: var(--text-body); margin-bottom: 12px; }
-        .section ul { padding-left: 22px; }
-        footer { text-align: center; margin-top: 52px; border-top: 1px solid var(--border-warm); padding-top: 28px; color: var(--text-muted); font-size: 12.5px; }
-        footer a { color: var(--sage-accent); text-decoration: none; font-weight: 600; }
-        footer a:hover { text-decoration: underline; }
+        strong {
+            color: var(--text-primary);
+        }
+        .contact-box {
+            background: #F9FAFB;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 32px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+        a {
+            color: var(--primary-accent);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 640px) {
+            .container { padding: 24px 16px; }
+            h1 { font-size: 24px; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <div class="logo-badge">VITT</div>
-            <h1>Terms of Service & Usage Agreement</h1>
-            <p class="subtitle">Effective Date: August 21, 2026 · App Version: 3.0.0 · Publisher: Kilani Sai Nikhil</p>
+            <div class="app-badge">VITT</div>
+            <h1>Terms of Service</h1>
+            <p class="meta-text">Last Updated: August 23, 2026 &bull; Effective Date: August 23, 2026</p>
         </header>
 
-        <div class="section">
-            <h3>1. Acceptance of Terms</h3>
-            <p>By downloading, installing, or using the VITT mobile application ("Application"), you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not install or use the application.</p>
-        </div>
+        <p>Please read these Terms of Service (&ldquo;Terms&rdquo;) carefully before using the <strong>VITT: Offline Expense Tracker</strong> mobile application developed by <strong>Kilani Sai Nikhil</strong>.</p>
 
-        <div class="section">
-            <h3>2. Nature of the Application & Open Utility</h3>
-            <p>VITT is an independent, offline-first personal finance management and bookkeeping utility created by <strong>Kilani Sai Nikhil</strong>. VITT is provided free of charge, with zero advertisements, zero in-app purchases, and zero cloud lock-in.</p>
-            <p>VITT is <strong>NOT</strong> a bank, Non-Banking Financial Company (NBFC), payment aggregator, registered investment adviser, or credit broker.</p>
-        </div>
+        <h2 class="section-title">1. Acceptance of Terms</h2>
+        <p>By downloading, installing, or using VITT, you agree to be bound by these Terms. If you do not agree to these Terms, do not install or use the application.</p>
 
-        <div class="section">
-            <h3>3. User Responsibilities & Data Backup</h3>
-            <p>Because VITT operates entirely on-device with zero cloud server synchronization:</p>
-            <ul>
-                <li>You are solely responsible for exporting and backing up your encrypted database if you intend to switch devices or reset your phone.</li>
-                <li>Uninstalling the app or clearing Android App Data without exporting will permanently delete your stored ledger records.</li>
-            </ul>
-        </div>
+        <h2 class="section-title">2. Description of Application</h2>
+        <p>VITT is an offline-first personal financial management application that helps users track personal expenses, manage budgets, organize debt records (Khata), calculate financial figures (SIP, EMI, FD, Tax Slabs), and receive on-device assistance.</p>
 
-        <div class="section">
-            <h3>4. Disclaimers & Limitation of Liability</h3>
-            <p>VITT is provided on an "AS IS" and "AS AVAILABLE" basis. While every effort has been made to ensure numerical precision and rock-solid stability, the developer disclaims all warranties of any kind, express or implied. Under no circumstances shall the developer be liable for any direct, indirect, incidental, or consequential damages resulting from the use or inability to use this software.</p>
+        <h2 class="section-title">3. User Responsibility &amp; Data Storage</h2>
+        <p>VITT operates on a local-first, zero-cloud architecture. All financial records and ledger entries exist solely on your physical device. Consequently:</p>
+        <ul>
+            <li>You are responsible for maintaining your device's security and creating regular backups using the in-app <em>Export JSON</em> feature.</li>
+            <li>We do not possess a copy of your financial data and cannot recover lost data if you lose or wipe your device without a backup.</li>
+        </ul>
+
+        <h2 class="section-title">4. Not Investment or Financial Advice (SEBI Disclaimer)</h2>
+        <p><strong>IMPORTANT DISCLAIMER:</strong> VITT, its on-device AI tools, and financial calculators provide analytical computations and simulations for educational and organizational purposes only.</p>
+        <ul>
+            <li>VITT is NOT a SEBI-registered investment adviser, financial planner, broker, or depository participant.</li>
+            <li>No content or calculation in this app constitutes financial, investment, legal, or tax advice.</li>
+            <li>Past investment performance and formula projections are not indicative of actual market returns. Always consult a qualified SEBI-registered professional before making investment decisions.</li>
+        </ul>
+
+        <h2 class="section-title">5. Intellectual Property</h2>
+        <p>The application design, software code, logos, trademarks, and user interface are the exclusive intellectual property of the developer. You may not decompile, reverse-engineer, modify, or distribute unauthorized copies of the application.</p>
+
+        <h2 class="section-title">6. Termination &amp; Account Deletion</h2>
+        <p>You may terminate your use of the application at any time by uninstalling the app or wiping your local data via the Settings screen. We reserve the right to suspend or terminate service access for violations of these Terms.</p>
+
+        <h2 class="section-title">7. Limitation of Liability</h2>
+        <p>To the maximum extent permitted by applicable law, VITT and its developer shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of data, profits, or financial losses resulting from your use of the application or reliance on its calculations.</p>
+
+        <h2 class="section-title">8. Governing Law &amp; Jurisdiction</h2>
+        <p>These Terms shall be governed by and construed in accordance with the laws of India. Any disputes arising in connection with these Terms shall be subject to the exclusive jurisdiction of the courts located in India.</p>
+
+        <div class="contact-box">
+            <h2 style="font-size: 16px; font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">9. Contact Us</h2>
+            <p style="margin-bottom: 4px;">If you have any questions or concerns regarding these Terms of Service, please contact us at:</p>
+            <p style="margin-bottom: 2px;"><strong>Developer:</strong> Kilani Sai Nikhil</p>
+            <p style="margin-bottom: 2px;"><strong>Email:</strong> <a href="mailto:vitt.companion@gmail.com">vitt.companion@gmail.com</a></p>
+            <p style="margin-bottom: 0;"><strong>Location:</strong> India</p>
         </div>
 
         <footer>
-            <p>&copy; 2026 VITT. Sovereign Personal Finance Companion for India. Built with 💚 by Kilani Sai Nikhil.</p>
-            <p style="margin-top: 10px;"><a href="./">Return to Homepage</a> · <a href="./privacy_policy.html">Privacy Policy</a></p>
+            <p>&copy; 2026 VITT. All rights reserved. &bull; <a href="privacy_policy.html">Privacy Policy</a></p>
         </footer>
     </div>
 </body>
